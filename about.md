@@ -2,7 +2,6 @@
 layout: about
 title: About
 description: >
-  Một người đơn giản và vô cùng lạc quan
 menu: true
 order: 4
 ---
