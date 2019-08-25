@@ -1,5 +1,5 @@
 ---
-layout: computationalmethod
+layout: list
 title: Computational Method
 menu: true
 order: 3
