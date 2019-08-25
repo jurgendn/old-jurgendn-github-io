@@ -1,11 +1,5 @@
 ---
-layout: about
-title: About
-description: >
-menu: true
-order: 4
+image: /assets/img/blog/hydejack-8.png
 ---
 
-**Tên đầy đủ**: Nguyễn Tiến Dũng  
-**Tên thường dùng**: Jurgen  
-Hiện đang sống và làm việc theo tấm gương đạo đức Hồ Chí Minh tại Đại học Bách khoa Hà Nội
+Hiện đang sống và làm việc theo tấm gương đạo đức HCM tại HUST
