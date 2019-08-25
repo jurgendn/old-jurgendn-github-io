@@ -8,4 +8,4 @@ order: 4
 
 **Tên đầy đủ**: Nguyễn Tiến Dũng  
 **Tên thường dùng**: Jurgen  
-Hiện đang là sinh viên Đại học Bách khoa Hà Nội - KSTN Toán Tin
+Hiện đang sống và làm việc theo tấm gương đạo đức Hồ Chí Minh tại Đại học Bách khoa Hà Nội - KSTN Toán Tin
