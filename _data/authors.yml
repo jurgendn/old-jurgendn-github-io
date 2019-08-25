@@ -12,7 +12,7 @@ author1:
 
   # This photo will be used in the about section
   picture:
-    path:            https://github.com/Billrizer/billrizer.github.io/blob/master/assets/img/bio_photo.jpg
+    path:            https://raw.githubusercontent.com/Billrizer/billrizer.github.io/master/assets/img/bio_photo.jpg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
       1x:            https://github.com/Billrizer/billrizer.github.io/blob/master/assets/img/bio_photo.jpg
