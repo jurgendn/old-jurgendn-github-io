@@ -1,3 +1,8 @@
+---
+layout: page
+title: Documentation
+---
+
 # Hình chữ nhật
 Một cách định nghĩa cơ bản nhất của hình chữ nhật, đến mức bất kì học sinh lớp 2 cũng có thể phát biểu rõ ràng:
 
