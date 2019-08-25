@@ -53,6 +53,8 @@ menu:
     url:               /compmethod/
   - title:             Documentation
     url:               /docs/
+  - title:             Resume
+    url:               /resume/
   - title:             About
     url:               /about/
 
