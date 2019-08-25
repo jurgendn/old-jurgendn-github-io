@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Mathematics
-slug: maths
+slug: math
 menu: true
 order: 2
 description: >
