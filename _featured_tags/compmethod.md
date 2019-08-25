@@ -1,9 +1,9 @@
 ---
 layout: list
-title: Hyde
-slug: hyde
-menu: false
-# order: 1
+title: Computational Method
+slug: compmethod
+menu: true
+order: 1
 description: >
   Hyde is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content.
   It’s based on Poole, the Jekyll butler.
