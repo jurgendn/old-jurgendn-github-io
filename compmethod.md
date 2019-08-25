@@ -1,7 +1,6 @@
 ---
-layout: list
+layout: page
 title: Computational Method
-slug: compmethod
 menu: true
 order: 1
 description: >

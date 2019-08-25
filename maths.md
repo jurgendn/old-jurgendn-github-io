@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Mathematics
 slug: maths
 menu: true
 order: 2
