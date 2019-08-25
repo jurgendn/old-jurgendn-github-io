@@ -48,7 +48,7 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Mathematics
-    url:               /math/_posts/
+    url:               /math/
   - title:             Computational Method
     url:               /compmethod/
   - title:             Documentation
