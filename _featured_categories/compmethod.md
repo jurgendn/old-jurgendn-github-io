@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Computational Method
-slug: compmethod
+slug: comp_method
 menu: true
 order: 1
 description: >
