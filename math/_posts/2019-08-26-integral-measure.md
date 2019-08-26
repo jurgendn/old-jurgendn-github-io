@@ -61,4 +61,4 @@ $$\begin{aligned}
     S = a.b
 \end{aligned}$$  
 Một câu hỏi mới lại đặt ra. Nếu như tất cả các hình đều có thể tính được qua các hình chữ nhật, thế thì người ta tính diện tích hình chữ nhật bằng cách nào?  
-Bài sau mình sẽ viết về diện tích của [```hình chữ nhật```](\math\_posts\2019-08-25-hcn)
+Bài sau mình sẽ viết về diện tích của [```hình chữ nhật```](\math\_posts\2019-08-25-hcn\)
