@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Computational Method
-slug: compmethod
+title: IT
+slug: it
 menu: true
 order: 2
 ---
