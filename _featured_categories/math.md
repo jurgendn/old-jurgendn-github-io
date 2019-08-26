@@ -1,6 +1,6 @@
 ---
 layout: list
-title: Mathematics
+title: Math
 slug: math
 menu: true
 order: 1
