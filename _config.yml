@@ -47,7 +47,7 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Mathematics
+  - title:             Math
     url:               /math/
   - title:             IT
     url:               /it/
