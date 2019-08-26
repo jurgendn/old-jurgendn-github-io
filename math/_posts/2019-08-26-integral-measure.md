@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Từ diện tích đề lí thuyết độ đo và tích phân
+title:  Từ diện tích đến lí thuyết độ đo và tích phân
 categories: [math]
 description:    >
     Lí thuyết độ đo và tích phân từ bài toán diện tích
