@@ -49,10 +49,10 @@ author:
 menu:
   - title:             Mathematics
     url:               /math/
-  - title:             Computational Method
-    url:               /compmethod/
-  - title:             Documentation
-    url:               /docs/
+  - title:             IT
+    url:               /it/
+  # - title:             Documentation
+  #   url:               /docs/
   # - title:             Resume
   #   url:               /resume/
   - title:             About
