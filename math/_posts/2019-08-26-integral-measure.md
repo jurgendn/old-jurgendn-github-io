@@ -4,8 +4,6 @@ categories: [math]
 description:    >
     Lí thuyết độ đo và tích phân từ bài toán diện tích
 ---
-# Từ diện tích cho đến lý thuyết độ đo và tích phân
-
 ## Diện tích
 Về cơ bản, việc tính diện tích của một hình là một vấn đề hết sức thực tiễn trong đời sống hàng ngày, tuy thế, việc tính toán được một cách chính xác diện tích của một hình có hình dạng bất kì là không dễ. Một vài người đề xuất việc ước lượng như sau:
 
