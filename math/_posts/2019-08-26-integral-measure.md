@@ -1,16 +1,17 @@
 ---
 layout: post
+title:  Từ diện tích đề lí thuyết độ đo và tích phân
 categories: [math]
 description:    >
     Lí thuyết độ đo và tích phân từ bài toán diện tích
 ---
-## Diện tích
+
 Về cơ bản, việc tính diện tích của một hình là một vấn đề hết sức thực tiễn trong đời sống hàng ngày, tuy thế, việc tính toán được một cách chính xác diện tích của một hình có hình dạng bất kì là không dễ. Một vài người đề xuất việc ước lượng như sau:
 
     - Thực hiện vẽ một lưới chữ nhật (thường là lưới ô vuông) đè lên hình đó. 
     (Các mắt lưới nên bằng nhau)
     - Đếm số hình chữ nhật con nằm trong hoặc nằm trên hình cần đo.
-    - Phần còn lại mời các vozer thể hiện
+    - Phần còn lại mời các tráng sĩ thể hiện
 
 <img src = "/assets/img/math/grid_on_area.png" width = "500">
 
