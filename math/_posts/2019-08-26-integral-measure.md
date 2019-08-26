@@ -56,9 +56,9 @@ Dĩ nhiên, các khoảng chia $$\Delta x_i \to 0$$ khi $$n \to \infty$$, bởi 
 $$\begin{aligned}
     \int_{a}^{b}f(x)dx = \underset{n \to \infty}{lim}{\sum_{i=1}^{n} f(x_i)\Delta x_{i}}
 \end{aligned}$$  
-Như vậy là ta đã có một công cụ để tính diện tích rất mạnh, có thể tính được hầu hết tất cả các loại hình, tất cả chỉ xuất phát từ công thức cực kì đơn giản: diện tích của hình chữ nhật có 2 cạnh là $$a, b$$
+Như vậy là ta đã có một công cụ để tính diện tích rất mạnh, có thể tính được hầu hết tất cả các loại hình, tất cả chỉ xuất phát từ công thức cực kì đơn giản: diện tích của hình chữ nhật có 2 cạnh là $$a, b$$  
 $$\begin{aligned}
     S = a.b
 \end{aligned}$$  
 Một câu hỏi mới lại đặt ra. Nếu như tất cả các hình đều có thể tính được qua các hình chữ nhật, thế thì người ta tính diện tích hình chữ nhật bằng cách nào?  
-Bài sau mình sẽ viết về diện tích của [```hình chữ nhật```](\math\_posts\2019-08-25-hcn\)
+Bài sau mình sẽ viết về diện tích của [```hình chữ nhật```](\math\2019-08-25-hcn\)
