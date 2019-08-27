@@ -1,8 +1,9 @@
 ---
 layout: post
+title: Giải phương trình bằng phương pháp chia đôi
 categories: [cs]
 description:    >
-    Tính gần đúng ma trận nghịch đảo bằng phương pháp Newton - Schulz
+    Giải phương trình bằng phương pháp chia đôi
 ---
 ## Ma trận nghịch đảo
 Ma trận nghịch đảo của một ma trận $$A$$ nào đó
