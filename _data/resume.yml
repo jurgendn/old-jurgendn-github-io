@@ -2,10 +2,10 @@
 # If you don't have a JSON Resume you can just edit this YAML file instead.
 # See also: <https://jsonresume.org/>.
 basics:
-  name: "Richard Hendricks"
-  label: "Programmer"
+  name: "Nguyễn Tiến Dũng"
+  label: "TỰ CMN DO"
   picture: "https://placehold.it/126x126"
-  email: ""
+  email: "dung.nt170062@sis.hust.edu.vn"
   phone: "(912) 555-4321"
   website: "https://piedpiper.com"
   summary: >
