@@ -58,7 +58,8 @@ def solveEquation(f, low, high, epsi=1e-6):
     return root
 ~~~  
 Như vậy bằng dăm ba dòng code thì mình đã giải quyết xong được bài toán.  
-Đến đây mình sẽ phân tích ưu và nhược điểm của thuật toán:  
+Đến đây mình sẽ phân tích ưu và nhược điểm của thuật toán: 
+ 
 |          Ưu điểm         |           Nhược điểm           |
 |:------------------------:|:------------------------------:|
 | Phạm vi sử dụng rất rộng |       Hội tụ không nhanh       |
