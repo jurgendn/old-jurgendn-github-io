@@ -43,7 +43,7 @@ y_{n+1} - x_{n+1} = \frac{\delta}{2^{n+1}},\forall n\in \Bbb{N}
 \end{matrix}\right.
 \end{aligned}$$  
 Từ đây dễ thấy dãy $$\{x_n\}, \{y_n\}$$ ngày càng gần tới nghiệm hơn, và như vậy một lúc nào đó ta sẽ thu được nghiệm gần đúng của phương trình.  
-Đoạn mã minh họa cho thuật toán với sai số $$\epsilon = 10^-6$$:  
+Đoạn mã minh họa cho thuật toán với hàm số $$f(x)$$ cho trước và sai số $$\epsilon = 10^-6$$:  
 ~~~python
 def solveEquation(f, low, high, epsi=1e-6):
     root = (low+high)/2
