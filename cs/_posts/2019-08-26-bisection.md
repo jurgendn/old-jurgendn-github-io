@@ -11,5 +11,6 @@ Lí do thứ 2, máy tính sẽ không sử dụng các biểu thức số để
 Bài này mình sẽ nói về phương pháp cưa đôi (bisection), là phương pháp đơn giản nhất.  
 **Khoảng phân li nghiệm:**  
 Một khoảng phân li nghiệm là khoảng mà trong đó chứa đúng một nghiệm của phương trình.  
-Ta sẽ cần sử dụng đến tính chất sau của hàm số liên tục:
-*Nếu hàm số $$f(x)$$ liên tục trên $$(a, b)$$ và thỏa mãn $$f(a)f(b)<0$$, khi đó tồn tại nghiệm $$x_0$$ nằm giữa $$a$$ và $$b$$.
+Ta sẽ cần sử dụng đến tính chất sau của hàm số liên tục:  
+*Nếu hàm số $$f(x)$$ liên tục trên $$(a, b)$$ và thỏa mãn $$f(a)f(b)<0$$, khi đó tồn tại nghiệm $$x_0$$ nằm giữa $$a$$ và $$b$$.  
+Như vậy, nếu ta có thể tìm được khoảng $$(a, b)$$ đủ nhỏ thì khi đó ta có thể kết luận được nghiệm gần đúng của $$f(x)=0$$*. 
