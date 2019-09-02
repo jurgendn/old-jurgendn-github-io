@@ -34,6 +34,7 @@ $$\begin{aligned}
     \end{matrix}\right.
 \end{matrix}\right.
 \end{aligned}$$  
+và dừng lại ngay khi $$x = \frac{x_n+y_n}{2}$$ tại một giá trị nào đó (nghiệm đúng).  
 Nếu ta đặt độ dài đoạn $$(a, b)$$ là $$\delta$$ thì ta có 2 điều sau 
 $$\begin{aligned}
 \left\{\begin{matrix}
