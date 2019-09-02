@@ -56,4 +56,11 @@ def solveEquation(f, low, high, epsi=1e-6):
             high = root
         root = (low+high)/2
     return root
-~~~
+~~~  
+Như vậy bằng dăm ba dòng code thì mình đã giải quyết xong được bài toán.  
+Đến đây mình sẽ phân tích ưu và nhược điểm của thuật toán:  
+|          Ưu điểm         	|           Nhược điểm           	|
+|:------------------------:	|:------------------------------:	|
+| Phạm vi sử dụng rất rộng 	|       Hội tụ không nhanh       	|
+|  Dễ viết, dễ triển khai  	| Không tìm được nghiệm bội chẵn 	|
+|                          	|                                	|
