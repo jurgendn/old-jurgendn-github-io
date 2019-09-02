@@ -14,13 +14,23 @@ Một khoảng phân li nghiệm là khoảng mà trong đó chứa đúng một
 Ta sẽ cần sử dụng đến tính chất sau của hàm số liên tục:  
 *Nếu hàm số $$f(x)$$ liên tục trên $$(a, b)$$ và thỏa mãn $$f(a)f(b)<0$$, khi đó tồn tại nghiệm $$x_0$$ nằm giữa $$a$$ và $$b$$.*    
 Như vậy, nếu ta có thể tìm được khoảng $$(a, b)$$ đủ nhỏ thì khi đó ta có thể kết luận được nghiệm gần đúng của $$f(x)=0$$.  
-Dễ thấy rằng một giá trị $$x_0 \in \(a, b\)$$ thì chỉ có thể xảy ra một trong các trường hợp sau:  
+Dễ thấy rằng một giá trị $$x \in \(a, b\)$$ thì chỉ có thể xảy ra một trong các trường hợp sau:  
 $$\begin{aligned}
 \left[
 \begin{matrix}
-x_0 = \frac{a+b}{2}\\ 
-x_0 \in \left(a, \frac{a+b}{2}\right)\\ 
-x_0 \in \left(\frac{a+b}{2}, b\right)
+x = \frac{a+b}{2}\\ 
+x \in \left(a, \frac{a+b}{2}\right)\\ 
+x \in \left(\frac{a+b}{2}, b\right)
 \end{matrix}
 \right.
+\end{aligned}$$  
+Từ đây, ta có thể thấy rằng, nghiệm $$x$$ nếu không đúng bằng $$\frac{a+b}{2}$$ thì sẽ thuộc vào một trong 2 khoảng còn lại, mà mỗi khoảng này lại có độ dài bằng một nửa khoảng trước đó. Vậy ta có thể thu hẹp khoảng nghiệm này lại bằng cách xét 2 dãy số $$\{x_n\}, \{y_n\}$$ như sau:  
+$$\begin{aligned}
+\left\{\begin{matrix}
+    x_0 = a, y_0 = b\\ 
+    \left[\begin{matrix}
+    x_{n+1} = \frac{x_n+y_n}{2}, y_{n+1} = y_n \text{    , nếu    }  x \in \left(\frac{x_n+y_n}{2}, y_n\right)\\ 
+    y_{n+1} = \frac{x_n+y_n}{2}, x_{n+1} = x_n \text{    , nếu    }  x \in \left(x_n, \frac{x_n+y_n}{2}\right)
+    \end{matrix}\right.
+\end{matrix}\right.
 \end{aligned}$$  
