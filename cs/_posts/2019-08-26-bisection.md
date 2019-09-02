@@ -12,5 +12,15 @@ Bài này mình sẽ nói về phương pháp cưa đôi (bisection), là phươ
 **Khoảng phân li nghiệm:**  
 Một khoảng phân li nghiệm là khoảng mà trong đó chứa đúng một nghiệm của phương trình.  
 Ta sẽ cần sử dụng đến tính chất sau của hàm số liên tục:  
-*Nếu hàm số $$f(x)$$ liên tục trên $$(a, b)$$ và thỏa mãn $$f(a)f(b)<0$$, khi đó tồn tại nghiệm $$x_0$$ nằm giữa $$a$$ và $$b$$.  
-Như vậy, nếu ta có thể tìm được khoảng $$(a, b)$$ đủ nhỏ thì khi đó ta có thể kết luận được nghiệm gần đúng của $$f(x)=0$$*. 
+*Nếu hàm số $$f(x)$$ liên tục trên $$(a, b)$$ và thỏa mãn $$f(a)f(b)<0$$, khi đó tồn tại nghiệm $$x_0$$ nằm giữa $$a$$ và $$b$$.*    
+Như vậy, nếu ta có thể tìm được khoảng $$(a, b)$$ đủ nhỏ thì khi đó ta có thể kết luận được nghiệm gần đúng của $$f(x)=0$$.  
+Dễ thấy rằng một giá trị $$x_0 \in \(a, b\)$$ thì chỉ có thể xảy ra một trong các trường hợp sau:  
+$$\begin{aligned}
+\left[
+\begin{matrix}
+x_0 = \frac{a+b}{2}\\ 
+x_0 \in \left(a, \frac{a+b}{2}\right)\\ 
+x_0 \in \left(\frac{a+b}{2}, b\right)
+\end{matrix}
+\right.
+\end{aligned}$$  
