@@ -46,15 +46,15 @@ Từ đây dễ thấy dãy $$\{x_n\}, \{y_n\}$$ ngày càng gần tới nghiệ
 Đoạn mã minh họa cho thuật toán với sai số $$\epsilon = 10^-6$$:  
 ~~~Python
 def solveEquation(f, a, b, epsi=1e-6):
-    root = (a+b)/2  
-    while b-a > epsi:  
-        if f(root) == 0:  
-            return root  
-        elif f(a)*f(root) > 0:  
-            a = root  
-            root = b  
-        elif f(a)*f(root) < 0:  
-            b = root  
-        root = (a+b)/2  
+    root = (a+b)/2
+    while b-a > epsi:
+        if f(root) == 0:
+            return root
+        elif f(a)*f(root) > 0:
+            a = root
+            root = b
+        elif f(a)*f(root) < 0:
+            b = root
+        root = (a+b)/2
     return root
 ~~~
