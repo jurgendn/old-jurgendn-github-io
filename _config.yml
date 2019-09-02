@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://billrizer.github.io
+url:                   https://jurgendn.github.io
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -24,7 +24,7 @@ title:                 Home
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Một người lạc quan
+  Càng lớn càng lạc quan
 
 # A shorter description for the sidebar.
 tagline:               >
@@ -102,14 +102,6 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 defaults:
-  - scope:
-      path:            hyde
-    values:
-      accent_color:    rgb(38,139,210)
-      accent_image:
-        background:    rgb(32,32,32)
-        overlay:       false
-
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
   - scope:
@@ -194,7 +186,7 @@ hydejack:
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner:      false
+  cookies_banner:      true
 
   # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
   advertise:           false
@@ -202,7 +194,7 @@ hydejack:
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
     # Set to `true` to always use the dark theme.
-    always:            true
+    always:            false
 
     # Set to `true` to use the dark theme based on visitors' local time.
     dynamic:           true
