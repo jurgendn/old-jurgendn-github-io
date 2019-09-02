@@ -34,3 +34,26 @@ $$\begin{aligned}
     \end{matrix}\right.
 \end{matrix}\right.
 \end{aligned}$$  
+Nếu ta đặt độ dài đoạn $$(a, b)$$ là $$\delta$$ thì ta có 2 điều sau 
+$$\begin{aligned}
+\left\{\begin{matrix}
+x_n<x<y_n\\ 
+y_{n+1} - x_{n+1} = \frac{\delta}{2^{n+1}},\forall n\in \Bbb{N}
+\end{matrix}\right.
+\end{aligned}$$  
+Từ đây dễ thấy dãy $$\{x_n\}, \{y_n\}$$ ngày càng gần tới nghiệm hơn, và như vậy một lúc nào đó ta sẽ thu được nghiệm gần đúng của phương trình.  
+Đoạn mã minh họa cho thuật toán với sai số $$\epsilon = 10^-6$$:
+
+~~~python
+def solveEquation(f, a, b, epsi=1e-6):
+    root = (a+b)/2
+    while b-a > epsi:
+        if f(root) == 0:
+            return root
+        elif f(a)*f(root) > 0:
+            a = root
+            root = b
+        elif f(a)*f(root) < 0:
+            b = root
+        root = (a+b)/2
+    return root
