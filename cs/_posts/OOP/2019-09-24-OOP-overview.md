@@ -5,3 +5,4 @@ categories: [cs]
 description:    >
     Viết để ôn bài thôi
 ---
+Bài này không dành cho các chiên gia.  
