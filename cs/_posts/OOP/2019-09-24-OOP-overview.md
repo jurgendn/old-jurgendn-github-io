@@ -14,27 +14,27 @@ Lúc này dễ dàng nhận thấy rằng chương trình của ta đã có cấ
 Mà khoan, như vậy tương đối giống với lập trình cấu trúc hồi ta học lập trình với ngôn ngữ ```C```. Trong bài sau mình sẽ phân biệt giữa struct và class sau.  
 Trong mô hình trên, Student được gọi là một lớp (```class```), các đối tượng tên, điểm, DoB là các biến thành viên (```member variables```). Một class như vậy có thể được biểu diễn thông qua đoạn mã sau  
 ~~~Cs  
-class Student
-{
-    string name;
-    string dob;
-    result mark;
+class Student  
+{  
+    string name;  
+    string dob;  
+    result mark;  
 }  
 Tại đây, ta phát sinh ra một câu chuyện khác về ```result mark;```, mình sẽ viết trong một vài bài tới về tính kế thừa (```inheritance```).  
 Ta sẽ chạy thử một vài ví dụ nhỏ như sau:  
 ~~~Cs  
-using System;
+using System;  
 
-class Student
-{
-    string name;
-    string dob;
+class Student  
+{  
+    string name;  
+    string dob;  
 
-    static int Main()
-    {
-        Student stu = new Student();
-        stu.name = "Jurgen";
-        stu.dob = "09/03/1999";
-        return 0;
-    }
+    static int Main()  
+    {  
+        Student stu = new Student();  
+        stu.name = "Jurgen";  
+        stu.dob = "09/03/1999";  
+        return 0;  
+    }  
 }
