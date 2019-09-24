@@ -45,7 +45,7 @@ class Student
 
 Mình sẽ giải thích từng dòng code một như sau.
 
-## Khai báo một class
+### Khai báo một class
 
 Một class được khai báo với từ khóa ```class```. Cú pháp chung sẽ là
 
