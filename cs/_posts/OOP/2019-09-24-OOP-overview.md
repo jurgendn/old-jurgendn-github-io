@@ -13,7 +13,7 @@ Tất nhiên, cách này rất dễ, tuy nhiên về nó lại không thực s�
 Lúc này dễ dàng nhận thấy rằng chương trình của ta đã có cấu trúc chặt chẽ hơn là mô hình trên. Mỗi học sinh sẽ có một tập các thành viên bao gồm tên, ngày sinh và điểm. Trong điểm, ta lại có 2 thành viên nhỏ hơn là điểm Toán và điểm Lý, và như vậy việc truy xuất dữ liệu của sinh viên, đồng thời tương tác giữa các thành viên cũng tốt hơn rất nhiều.  
 Mà khoan, như vậy tương đối giống với lập trình cấu trúc hồi ta học lập trình với ngôn ngữ ```C```. Trong bài sau mình sẽ phân biệt giữa struct và class sau.  
 Trong mô hình trên, Student được gọi là một lớp (```class```), các đối tượng tên, điểm, DoB là các biến thành viên (```member variables```). Một class như vậy có thể được biểu diễn thông qua đoạn mã sau  
-~~~Cs  
+~~~C#  
 class Student  
 {  
     string name;  
@@ -22,7 +22,7 @@ class Student
 }  
 Tại đây, ta phát sinh ra một câu chuyện khác về ```result mark;```, mình sẽ viết trong một vài bài tới về tính kế thừa (```inheritance```).  
 Ta sẽ chạy thử một vài ví dụ nhỏ như sau:  
-~~~Cs  
+~~~C#  
 using System;  
 
 class Student  
