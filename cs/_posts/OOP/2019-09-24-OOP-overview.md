@@ -22,7 +22,7 @@ class Student
 }  
 Tại đây, ta phát sinh ra một câu chuyện khác về ```result mark;```, mình sẽ viết trong một vài bài tới về tính kế thừa (```inheritance```).  
 Ta sẽ chạy thử một vài ví dụ nhỏ như sau:  
-~~~C#  
+~~~Csharp  
 using System;  
 
 class Student  
