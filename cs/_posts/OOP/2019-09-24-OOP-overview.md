@@ -82,3 +82,8 @@ class Student
     }
 }
 ~~~
+
+Như vậy, về cơ bản ta đã thiết kế xong một class đơn giản.  
+Dễ hiểu đúng không.  
+Trong bài sau mình sẽ viết về các thuộc tính (```properties```) của class, attribute và các phương thức.  
+Các bạn xem tại [đây](foo)
