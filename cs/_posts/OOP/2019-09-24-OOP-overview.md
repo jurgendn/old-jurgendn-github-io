@@ -37,7 +37,7 @@ class Student
     {  
         Student stu = new Student();  
         stu.name = "Jurgen";  
-        stu.dob = "09/03/1999";  
+        stu.dob = "01/01/1999";  
         return 0;  
     }  
 }
@@ -56,4 +56,29 @@ class [class_name]
 }
 ~~~
 
-Dễ thấy
+### Khai báo các members và methods trong class
+
+Ta sẽ lấy luôn ví dụ là vấn đề ban nãy, câu chuyện về học sinh và các thuộc tính.
+
+~~~c#
+class Student
+{
+    string name;
+    // Ta dùng string bởi tên sẽ là một xâu
+
+    string dob;
+    //Ngày sinh ta cũng sẽ để là một xâu cho dễ xử lí.
+    //Tất nhiên sau này khi đến phần kế thừa, ta hoàn toàn có thể định nghĩa một class về ngày tháng
+
+    //Khởi tạo entry point cho chương trình
+    static int Main()
+    {
+        //Tạo mới một đối tượng thuộc class Student
+        Student stu = new Student();
+        //Gán giá trị cho các member
+        stu.name = "Jurgen";
+        stu.dob = "01/01/1999";
+        return 0;
+    }
+}
+~~~
