@@ -33,6 +33,7 @@ $$\begin{aligned}
     x_0 = a, y_0 = b\\
     \left[\begin{matrix}
         x_{n+1} = \frac{x_n+y_n}{2}, y_{n+1} = y_n \text{  , nếu  }  x \in \left(\frac{x_n+y_n}{2}, y_n\right)\\
+        \\
         y_{n+1} = \frac{x_n+y_n}{2}, x_{n+1} = x_n \text{  , nếu  }  x \in \left(x_n, \frac{x_n+y_n}{2}\right)
     \end{matrix}\right.
 \end{matrix}\right.
