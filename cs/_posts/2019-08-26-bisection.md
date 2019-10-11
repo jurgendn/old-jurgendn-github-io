@@ -31,6 +31,7 @@ Từ đây, ta có thể thấy rằng, nghiệm $$x$$ nếu không đúng bằn
 $$\begin{aligned}
 \left\{\begin{matrix}
     x_0 = a, y_0 = b\\
+    \\
     \left[\begin{matrix}
         x_{n+1} = \frac{x_n+y_n}{2}, y_{n+1} = y_n \text{  , nếu  }  x \in \left(\frac{x_n+y_n}{2}, y_n\right)\\
         \\
