@@ -1,0 +1,25 @@
+---
+layout: page
+---
+<main class="page blog-post">
+    <section class="clean-block clean-post dark">
+      <div class="container">
+        <div class="block-content">
+          <div
+            class="post-image"
+            style="
+              background-image: url('/assets/img/page/background_about.jpg');
+            "
+          ></div>
+          <div class="post-body">
+            <h3>{{page.title}}</h3>
+            <div class="post-info">
+              <span><a href="{{ author.web }}">{{ author.name }}</a></span>
+            </div class="text-justify" style="font-size: 15px;line-height: 1.5;"">
+              {{page.content}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
