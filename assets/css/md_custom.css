@@ -121,5 +121,5 @@ blockquote p {
 /* Paragraph */
 p {
   text-align: justify;
-  line-height: 1.2px;
+  line-height: 2;
 }
