@@ -120,6 +120,7 @@ blockquote p {
 }
 
 /* Paragraph */
-p{
+p {
   text-align: justify;
+  line-height: 25px;
 }
