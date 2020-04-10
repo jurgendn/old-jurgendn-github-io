@@ -2,3 +2,8 @@
   color: rgb(255,255,255)!important;
 }
 
+@media (min-width: 360px) and (max-width: 500px) {
+  .clean-block.clean-hero {
+    min-height: 90vh;
+  }
+}
