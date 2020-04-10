@@ -4,6 +4,7 @@ title: Bài 1 - Tổng quan về lập trình hướng đối tượng
 categories: code
 description:    >
     Viết để ôn bài thôi
+img: '/assets/img/page/background.jpg'
 ---
 Có sai sót ở đâu các chiên gia góp ý nhé. 
 

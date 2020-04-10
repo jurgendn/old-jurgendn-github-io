@@ -4,11 +4,11 @@ title: Blog trẻ thơ
 permalink: /
 ---
 <main class="page landing-page">
-    <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/page/background.jpg&quot;);color: rgba(0,0,0,0.8);background-attachment: fixed;">
-        <div class="text">
-            <h2>Jurgendn</h2>
-            <p>Viết ba lăng nhăng chia sẻ sự đời</p><a class="btn btn-outline-light btn-lg" role="button" href="{{site.baseurl}}/blog-list/">Bắt đầu đọc</a></div>
-    </section>
+    <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/page/page_background/background.jpg&quot;);color: rgba(0,0,0,0.8);background-attachment: fixed;background-position: center;">
+            <div class="text">
+                <h2>Jurgendn</h2>
+                <p>Viết ba lăng nhăng chia sẻ sự đời</p><a class="btn btn-outline-light btn-lg" role="button" href="{{site.baseurl}}/blog-list/">Bắt đầu đọc</a></div>
+        </section>
     <section id="about" class="clean-block about-us">
         <div class="container">
             <div class="block-heading">

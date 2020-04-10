@@ -1,1 +1,0 @@
-import katex from 'katex'

@@ -8,18 +8,10 @@ permalink: /category/others
     <section class="clean-block clean-blog-list dark">
         <div class="container">
             <header style="
-          background-image: url('/assets/img/page/others_backgr.jpg');
-          background-size: cover;
-          background-position: bottom;
-          background-attachment: fixed;
-          background-repeat: no-repeat;
+          background-image: url('/assets/img/page/page_background/others_backgr.jpg');
+          background-size: cover;background-position: bottom;background-attachment: fixed;background-repeat: no-repeat;height: 50vh;margin-top: 0px;
         ">
-                <div class="d-flex flex-column justify-content-lg-center align-items-lg-center block-heading" style="
-            background-size: cover;
-            background-position: center;
-            background-color: rgba(7, 33, 0, 0.69);
-            margin-top: 0px;
-          ">
+                <div class="d-flex flex-column justify-content-center justify-content-lg-center align-items-lg-center block-heading" style="background-size: cover;background-position: center;background-color: rgba(0,33,7,0.64);margin-top: 0px;height: 50vh;">
                     <h2 class="text-uppercase text-info" style="
               margin-bottom: 20px;
               margin-top: 15px;
@@ -52,10 +44,15 @@ permalink: /category/others
       >{{category[0]}}</h3>
       <div class="block-content">
         {% for post in category[1] %}
+            {% if post.img_url %}
+                {% assign img_url = post.img_url %}
+            {% else %}
+                {% assign img_url = "/assets/img/page/post_thumbnail/others_default_thumbnail.jpeg" %}
+            {% endif %}
             <div class="clean-blog-post">
                 <div class="row">
                     <div class="col-lg-5 d-flex flex-column justify-content-xl-center align-items-xl-center">
-                        <img class="rounded img-fluid" src="/assets/img/page/background.jpg" style="
+                        <img class="rounded img-fluid" src="{{img_url}}" style="
                     background-position: center;
                     background-size: auto;
                     max-height: 170px;

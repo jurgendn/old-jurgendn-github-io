@@ -5,9 +5,31 @@ layout: page
   <section class="clean-block clean-post dark">
     <div class="container">
       <div class="block-content">
+        {% if page.img_url %}
         <div class="post-image" style="
-              background-image: url('/assets/img/page/background_about.jpg');
+              background-image: url({{page.img_url}});background-position: center;
             "></div>
+        {% else %}
+          {% assign cat = page.categories[0] %}
+          {% case cat %}
+            {% when 'mathematics' %}
+            <div class="post-image" style="
+            background-image: url('/assets/img/page/post_background/mathematics_background_default.jpeg');background-position: center;
+          "></div>
+            {% when 'code' %}
+            <div class="post-image" style="
+            background-image: url('/assets/img/page/post_background/code_background_default.jpeg');background-position: center;
+          "></div>
+            {% when 'others' %}
+            <div class="post-image" style="
+            background-image: url('/assets/img/page/post_background/others_background_default.jpeg');background-position: center;
+          "></div>
+            {% else %}
+            <div class="post-image" style="
+            background-image: url('/assets/img/page/background_about.jpg');background-position: center;
+          "></div>
+          {% endcase %}
+        {% endif %}
         <div class="post-body">
           <h3>{{page.title}}</h3>
           <div class="post-info">
