@@ -98,7 +98,6 @@ tbody.collapse.in {
   display: table-row-group;
 }
 
-
 /* Blockquote */
 blockquote {
   background: #f8fff4;
@@ -122,5 +121,5 @@ blockquote p {
 /* Paragraph */
 p {
   text-align: justify;
-  line-height: 25px;
+  line-height: 1.2px;
 }
