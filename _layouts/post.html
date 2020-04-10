@@ -16,32 +16,24 @@ layout: page
               {{page.content}}
             </div>
           </div>
-          <div
-      class=" d-flex flex-row justify-content-between align-items-stretch" style="margin-top: 20px;">
-          {% if page.previous.url %}
-          <div style="margin-right: 20px; width: 50vw;">
-            <p class="text-break text-left" style="
-            margin: 0px;
-            margin-right: 0px;
-            padding: 10px;
-            font-style: normal;
-          ">
+          <div class=" d-flex flex-row flex-grow-1 justify-content-between align-items-stretch align-content-end
+            align-self-end justify-content-lg-center align-items-lg-start" style="margin-top: 20px;">
+          <div style="margin-right: 20px;width: 50vw;">
+            {% if page.previous.url %}
+            <p class="text-break text-left" style="margin: 0px;margin-right: 0px;padding: 10px;font-style: normal;">
               <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
             </p>
+            {% endif %}
           </div>
-          {% endif %}
-          {% if page.next.url %}
-          <div style="margin-left: 20px; width: 50vw;">
-            <p class="text-break text-right" style="
-            margin: 0;
-            margin-left: 20px;
-            padding: 10px;
-            font-style: normal;
-          ">
+          <div class="text-right d-flex d-lg-flex flex-row justify-content-lg-end"
+            style="margin-left: 20px;width: 50vw;">
+            {% if page.next.url %}
+            <p class="text-break text-right d-flex d-lg-flex flex-column justify-content-end align-items-end align-content-end justify-content-lg-center align-items-lg-end"
+              style="margin: 0;margin-left: 20px;padding: 10px;font-style: normal;">
               <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
             </p>
+            {% endif %}
           </div>
-          {% endif %}
         </div>
       </div>
     </div>
