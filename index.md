@@ -12,7 +12,7 @@ permalink: /
     <section id="about" class="clean-block about-us">
         <div class="container">
             <div class="block-heading">
-                <h2 class="text-info" style="color: #3e0101;">About</h2>
+                <h2 class="text-info" style="color: #3e0101!important;">About</h2>
             </div>
             <div class="row justify-content-center">
                 <div class="col-sm-6 col-lg-4 d-flex justify-content-lg-center align-items-lg-center">
