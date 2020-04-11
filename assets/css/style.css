@@ -1,5 +1,5 @@
 .text-info {
-  color: rgb(109, 0, 0)!important;
+  color: #eeeeee!important;
 }
 
 @media (min-width:340px) and (max-width: 575px) {
