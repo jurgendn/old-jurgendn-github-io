@@ -6,35 +6,31 @@ layout: page
     <div class="container">
       <div class="block-content">
         {% if page.img_url %}
-        <div class="post-image" style="
-              background-image: url({{page.img_url}});background-position: center;
-            "></div>
+          {% assign img_url = page.img_url %}
         {% else %}
           {% assign cat = page.categories[0] %}
           {% case cat %}
             {% when 'mathematics' %}
-            <div class="post-image" style="
-            background-image: url('/assets/img/page/post_background/mathematics_background_default.jpeg');background-position: center;
-          "></div>
+              {% assign img_url = "/assets/img/page/post_background/mathematics_background_default.jpeg" %}
             {% when 'code' %}
-            <div class="post-image" style="
-            background-image: url('/assets/img/page/post_background/code_background_default.jpeg');background-position: center;
-          "></div>
+              {% assign img_url = "/assets/img/page/post_background/code_background_default.jpeg" %}           
             {% when 'others' %}
-            <div class="post-image" style="
-            background-image: url('/assets/img/page/post_background/others_background_default.jpeg');background-position: center;
-          "></div>
+              {% assign img_url = "/assets/img/page/post_background/others_background_default.jpeg" %}
             {% else %}
-            <div class="post-image" style="
-            background-image: url('/assets/img/page/background_about.jpg');background-position: center;
-          "></div>
-          {% endcase %}
+              {% assign img_url = "/assets/img/page/background_about.jpg" %}
+          {% endcase %}         
         {% endif %}
+        <!-- Insert image -->
+        <div class="post-image" style="
+        background-image: url({{img_url}}); background-position:initial; background-attachment:fixed;
+      "></div>
+      <!-- Content -->
         <div class="post-body">
-          <h3>{{page.title}}</h3>
+          <h3 style="color: rgb(95, 3, 3);">{{page.title}}</h3>
           <div class="post-info">
             <span><a href="{{ author.web }}">{{ author.name }}</a></span>
           </div>
+          {{page.img_url}}
               {{page.content}}
             </div>
           </div>

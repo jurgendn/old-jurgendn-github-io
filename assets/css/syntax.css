@@ -179,5 +179,7 @@
 }
 
 .highlight {
-  background-color: #edfaf6;
+  background-color: #e4f7f1;
+  padding: 10px;
+  border-radius: 9px;
 }
