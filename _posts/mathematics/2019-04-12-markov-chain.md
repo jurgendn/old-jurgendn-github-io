@@ -160,4 +160,4 @@ Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể đư�
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
 
-<img src="markov-chain.assets/Graph-1586720602019.png" alt="Graph" style="zoom:90%;" />
+<img src="markov-chain.assets/Graph.png" alt="Graph" style="zoom:80%;" />
