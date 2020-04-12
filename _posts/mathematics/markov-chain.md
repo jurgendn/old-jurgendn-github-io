@@ -1,3 +1,11 @@
+---
+layout: post
+categories: mathematics
+title: Markov Chain - Phần 1
+---
+
+
+
 Đợt này sắp thi mà ngồi ôn chả thấy vào mấy, thế nên ngồi viết vậy, cũng là một lần học luôn. Mà môn này lại còn khó nữa -_-
 
 Viết linh tinh về môn này vậy
