@@ -4,6 +4,7 @@ title:				Markov Chain - Phần 1
 categories:		mathematics
 description:	Sơ lược về xích Markov, phần này đa phần sẽ đặt ra các khái niệm cơ bản
 author:			Jurgen
+toc: true
 ---
 
 Đợt này sắp thi mà ngồi ôn chả thấy vào mấy, thế nên ngồi viết vậy, cũng là một lần học luôn. Mà môn này lại còn khó nữa -_-
@@ -16,6 +17,7 @@ Rất nhiều sự kiện trong thực tế xảy ra một cách ngẫu nhiên, 
 
 Tất nhiên, mức độ phụ thuộc vào quá khứ là khác nhau. Có những sự kiện phụ thuộc vào rất nhiều các trạng thái trong quá khứ, cũng có những sự kiện thì lại chỉ phụ thuộc vào những trạng thái gần đây. Trong khuôn khổ bài viết, ta sẽ chỉ xét đến những sự kiện chỉ phụ thuộc vào trạng thái ngay trước đó
 
+- Table of Content
 {:toc}
 
 ## Xích Markov
@@ -41,6 +43,7 @@ Một cách hình thức hơn, một xích Markov là một quá trình ngẫu n
 ##### 2.1. Xích Markov thuần nhất
 
 > Xích Markov thuần nhất là xích Markov thỏa mãn
+>
 > $$
 > P(X_1 = j|X_0 = i) = P(X_{n+1}=j|X_n = i), \forall n \ge 0
 > $$
@@ -61,10 +64,10 @@ Tất nhiên là cái này khá dễ và ít quan trọng
 
 Kí hiệu $$\lambda = \{\lambda_0,..,\lambda_n\}$$ là một phân phối của xích Markov với:
 
-
 $$
 \lambda_i = P(X = i)
 $$
+
 **Ma trận xác suất chuyển**
 
 Ma trận xác suất chuyển $$P$$ là ma trận biểu diễn xác suất chuyển từ trạng thái này sang trạng thái khác của một xích Markov.
@@ -76,6 +79,7 @@ Ma trận xác suất chuyển $$P$$ là ma trận biểu diễn xác suất chu
 ##### Định nghĩa
 
 > Ma trận xác suất chuyển $$P$$ là ma trận biểu diễn xác suất xích chuyển sang một trạng thái từ trạng thái trước đó, là một ma trận $$n \times n$$ có các phần tử xác định như sau:
+> 
 > $$
 > P_{ij} = P(X_{n+1} = j|X_n = i,...,X_0 = i_0) = P(X_{n+1} = j|X_n = i)
 > $$
@@ -99,6 +103,7 @@ Ta có định lí sau
 **Định lí 1: Phân phối hữu hạn chiều**
 
 > Dãy biến ngẫu nhiên $$(X_n)$$ nhận giá trị trong không gian trạng thái $$I$$ là một xích Markov $$(\lambda, P)$$ khi và chỉ khi với mọi $$i_0, i_1,..,i_n \in I$$ ta có
+> 
 > $$
 > P(X_0 = i_0, X_1 = i_1,...,X_n = i_n) = \lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}
 > $$
@@ -107,7 +112,6 @@ Ta có định lí sau
 
 $$\Rightarrow$$ Giả sử $$(X_n)$$ là xích Markov, khi đó ta có
 
-
 $$
 \begin{aligned}
 P(X_0 = i_0, X_1 = i_1,...,X_n = i_n) & = P(X_0 = i_0)P(X_1 = i_1|X_0 = i_0)...P(X_n = i_n|X_{n-1} = i_{n-1},...,X_0 = i_0) \\
@@ -115,9 +119,11 @@ P(X_0 = i_0, X_1 = i_1,...,X_n = i_n) & = P(X_0 = i_0)P(X_1 = i_1|X_0 = i_0)...P
 & = \lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}
 \end{aligned}
 $$
+
 $$\Leftarrow$$ Giả sử phân phối ban đầu $$P(X_0 = i_0) = \lambda_0$$.
 
 Ta có
+
 $$
 \begin{aligned}
 P(X_n = i_n|X_{n-1} = i_{n-1},..,X_0 = i_0) & = \frac{P(X_0 = i_0, X_1 = i_1,...,X_n = i_n)}{P(X_0 = i_0, X_1 = i_1,...,X_{n-1} = i_{n-1})} \\
@@ -125,6 +131,7 @@ P(X_n = i_n|X_{n-1} = i_{n-1},..,X_0 = i_0) & = \frac{P(X_0 = i_0, X_1 = i_1,...
 & = P_{i_{n-1}i_n} = P(X_n = i_n|X_{n-1} = i_{n-1})
 \end{aligned}
 $$
+
 Điều này chứng tỏ $$(X_n)$$ có ma trận xác suất chuyển và thỏa mãn tính Markov
 
 Ta có điều cần chứng minh
@@ -153,4 +160,4 @@ Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể đư�
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
 
-![Graph-1586720602019](markov-chain.assets/Graph-1586720602019.png)
+<img src="markov-chain.assets/Graph-1586720602019.png" alt="Graph" style="zoom:90%;" />
