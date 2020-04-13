@@ -233,7 +233,7 @@ Trong không gian trạng thái $$I$$, ta không chỉ quan tâm đến từng t
 
 **Định nghĩa 1:** Trạng thái $$i$$ có thể tới được trạng thái $$j$$  nếu tồn tại $$n$$ sao cho $$P_{ij}^{n} > 0$$
 
-**Định nghĩa 2: ** Các trạng thái $$i$$ và $$j$$ được gọi là liên thông nếu tồn tại $$m, n \ge 0$$ sao cho $$P_{ij}^n <0$$ và $$P_{ji}^m >0$$ 
+**Định nghĩa 2:** Các trạng thái $$i$$ và $$j$$ được gọi là liên thông nếu tồn tại $$m, n \ge 0$$ sao cho $$P_{ij}^n <0$$ và $$P_{ji}^m >0$$ 
 
 Từ các định nghĩa trên, ta xác định được trên không gian trạng thái `I` một quan hệ tương đương là quan hệ liên thông thỏa mãn
 
@@ -245,9 +245,9 @@ Chứng minh không có gì khó khăn nên ta bỏ qua.
 
 Từ đây, ta có thể phân lớp các trạng thái của xích Markov.
 
-**Định nghĩa 3: **Lớp $$C$$ được gọi là đóng nếu $$x \in C, x \to y \Rightarrow y \in C$$
+**Định nghĩa 3:** Lớp $$C$$ được gọi là đóng nếu $$x \in C, x \to y \Rightarrow y \in C$$
 
-**Định nghĩa 4: ** Lớp các trạng thái $$C$$ được gọi là tối giản nếu 2 trạng thái bất kì trong $$C$$ đều liên thông
+**Định nghĩa 4:** Lớp các trạng thái $$C$$ được gọi là tối giản nếu 2 trạng thái bất kì trong $$C$$ đều liên thông
 
 Từ đây ta có thể phân lớp các trạng thái trong không gian trạng thái $$I$$ thành các thành phần nhỏ hơn
 
