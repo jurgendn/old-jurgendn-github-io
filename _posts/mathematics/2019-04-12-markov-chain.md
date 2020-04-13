@@ -188,7 +188,7 @@ Ta có điều cần chứng minh.
 
 Một cách minh họa bằng hình học có thể được biểu diễn như hình dưới đây
 
-<img src="../../post_image/mathematics/2019-04-12-markov-chain.assets/image-20200413143221094.png" alt="image-20200413143221094" style="zoom:67%;" />
+<img src="/post_image/mathematics/2019-04-12-markov-chain.assets/image-20200413143221094.png" alt="image-20200413143221094" style="zoom:67%;" />
 
 Một đường đi $$i \to j$$ sau $$m+n$$ bước có thể được biểu diễn thành 2 đường đi
 
