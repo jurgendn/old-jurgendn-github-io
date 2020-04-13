@@ -259,4 +259,4 @@ Tạm thời dừng ở đây đã, tớ cũng chỉ đưa ra các khái niệm 
 
 [1]S. M. Ross, *Introduction to Probability models*, 10th ed. Elsevier, 2010, pp. 191 - 210.
 
-[2]R. M. Feldman and C. Valdez-Flores, *Applied Probability and Stochastic Proccesses*, 2nd ed. Springer, 2020.
+[2]R. M. Feldman and C. Valdez-Flores, *Applied Probability and Stochastic Proccesses*, 2nd ed. Springer, 2010.
