@@ -147,10 +147,11 @@ Với mọi $$m, n \ge 0$$ ta có:
 
 Với không gian trạng thái `I = {0,1,2}` và ma trận xác suất chuyển $$P$$
 
-| 0.7  | 0.3  | 0    |
-| ---- | ---- | ---- |
-| 0.2  | 0.6  | 0.2  |
-| 0.4  | 0.1  | 0.5  |
+|      | 0    | 1    | 2    |
+| ---- | ---- | ---- | ---- |
+| 0    | 0.7  | 0.3  | 0    |
+| 1    | 0.2  | 0.6  | 0.2  |
+| 2    | 0.4  | 0.1  | 0.5  |
 
 Hãy vẽ đồ thị minh họa sơ đồ chuyển trạng thái của xích Markov trên
 
@@ -160,4 +161,4 @@ Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể đư�
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
 
-<img src="markov-chain.assets/Graph.png" alt="Graph" style="zoom:80%;" />
+![Graph](../../post_image/mathematics/2019-04-12-markov-chain.assets/Graph.png)
