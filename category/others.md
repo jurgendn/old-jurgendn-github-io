@@ -62,7 +62,7 @@ permalink: /category/others
                         <h3><a class="list-group-item list-group-item-action"
                                 href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                         <div class="info">
-                            <span class="text-muted">Jan 16, 2018 by&nbsp;<a href="#">Jurgendn</a></span>
+                            <span class="text-muted">{{post.date | date: "%d-%m-%Y"}} - <a href="{{site.baseurl}}/#about">by Jurgendn</a></span>
                         </div>
                         <p>{{post.description}}</p>
                         <button class="btn btn-outline-primary btn-sm" type="button" style="width: 100px;"><a
