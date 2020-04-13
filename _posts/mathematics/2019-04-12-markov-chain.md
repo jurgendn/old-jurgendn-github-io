@@ -13,7 +13,7 @@ Viết linh tinh về môn này vậy
 
 ## Động lực thúc đẩy
 
-Rất nhiều sự kiện trong thực tế xảy ra một cách ngẫu nhiên, như sự thiết bị gặp lỗi, hay biến động trong sản lượng sản xuất, hay dễ hơn cả là tung đồng xu hoặc dice. Những sự kiện có thể xảy ra một cách ngẫu nhiên và độc lập, tuy nhiên phần nhiều trong thực tế, các sự kiện ngẫu nhiên xảy ra không hoàn toàn như vậy. Chúng ít nhiều đều có tác động bởi các trạng thái trong quá khứ. Cổ phiếu chứng khoán hoàn toàn không xảy ra ngẫu nhiên mà sẽ phụ thuộc ít nhiều vào trạng thái của nó trong các ngày trước đó.
+Rất nhiều sự kiện trong thực tế xảy ra một cách ngẫu nhiên, như sự thiết bị gặp lỗi, hay biến động trong sản lượng sản xuất, hay dễ hơn cả là tung đồng xu hoặc dice. Những sự kiện có thể xảy ra một cách ngẫu nhiên và độc lập, tuy nhiên phần nhiều trong thực tế, các sựkiện ngẫu nhiên xảy ra không hoàn toàn như vậy. Chúng ít nhiều đều có tác động bởi các trạng thái trong quá khứ. Cổ phiếu chứng khoán hoàn toàn không xảy ra ngẫu nhiên mà sẽ phụ thuộc ít nhiều vào trạng thái của nó trong các ngày trước đó.
 
 Tất nhiên, mức độ phụ thuộc vào quá khứ là khác nhau. Có những sự kiện phụ thuộc vào rất nhiều các trạng thái trong quá khứ, cũng có những sự kiện thì lại chỉ phụ thuộc vào những trạng thái gần đây. Trong khuôn khổ bài viết, ta sẽ chỉ xét đến những sự kiện chỉ phụ thuộc vào trạng thái ngay trước đó
 
@@ -161,4 +161,102 @@ Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể đư�
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
 
-![Graph](/post_image/mathematics/2019-04-12-markov-chain.assets/Graph.png)
+![Graph](../../post_image/mathematics/2019-04-12-markov-chain.assets/Graph.png)
+
+#### 2. Phương trình Chapman - Kolmogorov
+
+> Cho xích Markov $$(\lambda, P)$$ với không gian trạng thái $$I$$. Khi đó, với kí hiệu $$P^{(n)}$$ là ma trận xác suất chyển sau $$n$$ bước, ta có điều sau đây:
+> $$
+> P_{ij}^{(m+n)} = \sum_{r \in I}P_{ir}^{(m)}P_{rj}^{(n)}
+> $$
+> 
+
+***Chứng minh***
+
+Ta có
+
+
+$$
+\begin{aligned}
+P_{ij}^{(m+n)} & = P(X_{m+n} = j|X_{0} = i) = \sum_{r \in I}P(X_{m+n} = j, X_m = r|X_0 = i) \\
+& = \sum_{r \in I}P(X_{m+n} = j|X_m = r, X_0 = i)P(X_m = r|X_0 = i) \\ 
+& = \sum_{r \in I}P(X_{m+n} = j|X_m = r)P(X+m = r|X_0 = i) \\
+& = \sum_{r \in I}P_{ir}^{(m)}P_{rj}^{(n)}
+\end{aligned}
+$$
+Ta có điều cần chứng minh.
+
+Một cách minh họa bằng hình học có thể được biểu diễn như hình dưới đây
+
+<img src="/post_image/mathematics/2019-04-12-markov-chain.assets/image-20200413143221094.png" alt="image-20200413143221094" style="zoom:67%;" />
+
+Một đường đi $$i \to j$$ sau $$m+n$$ bước có thể được biểu diễn thành 2 đường đi
+
+- Đường đi từ $$i \to r$$
+- Đường đi từ $$r \to j$$
+
+Do đó tất cả $$i \to j$$ sau $$m+n$$ bước khi đi qua bước thứ $$m$$ đều phải đi qua một trong các trạng thái $$r \in I$$.
+
+**Tính chất**
+
+1. $$P^{(1)} = P$$
+   Điều này là khá hiển nhiên do $$P^{(1)}$$ là ma trận xác suất chuyển sau 1 bước
+2. $$P^{(n+1)} = P^{(1)}.P^{(n)} = P.P^{(n)}$$
+   Hệ quả này suy ra trực tiếp từ phương trình CK
+3. $$P^{(n)} = P^{n}$$
+   Chứng minh khá dễ dàng thông qua quy nạp
+   - $$P^{(1)} = P$$
+   - $$P^{(n-1)} = P^{n-1}$$
+   - $$ P^{(n)} = P.P^{(n-1)} = P.P^{n-1} = P^{n}$$ 
+
+**Ví dụ:** Giả sử rằng thời tiết của ngày hôm sau phụ thuộc vào thời tiết của ngày hôm nay và không phụ thuộc vào những ngày trước đó. Cho rằng thời tiết gồm 2 trạng thái `I = {không mưa, mưa}` và
+
+- Hôm nay mưa, ngày hôm sau mưa với xác suất $$0.7$$
+- Hôm nay không mưa, ngày hôm sau không mưa với xác suất $$0.6$$
+
+>  Biết rằng hôm nay không mưa, tính xác suất để 4 ngày nữa trời sẽ mưa.
+
+Để cho tiện, ta sẽ coi mưa ứng với trạng thái 0, không mưa ứng với trạng thái 1
+
+Không gian trạng thái `I = {0, 1}`, ma trận xác suất chuyển $$P$$
+
+|      | 0    | 1    |
+| ---- | ---- | ---- |
+| 0    | 0.7  | 0.3  |
+| 1    | 0.4  | 0.6  |
+
+Xác suất để 4 ngày nữa trời mưa nếu hôm nay không mưa chính là $$P^{(4)}_{10} = P_{10}^{4} = 0.5668$$
+
+### Phân lớp trạng thái
+
+Trong không gian trạng thái $$I$$, ta không chỉ quan tâm đến từng trạng thái đơn lẻ, thay vào đó ta cũng cần phải nghiên cứu về mối quan hệ giữa các trạng thái. Liệu xuất phát từ trạng thái $$i$$ ta có đến được trạng thái $$j$$ hay không? Từ trạng thái $$j$$ có thể đến được những trạng thái nào? Ta đến với một số khái niệm
+
+**Định nghĩa 1:** Trạng thái $$i$$ có thể tới được trạng thái $$j$$  nếu tồn tại $$n$$ sao cho $$P_{ij}^{n} > 0$$
+
+**Định nghĩa 2: ** Các trạng thái $$i$$ và $$j$$ được gọi là liên thông nếu tồn tại $$m, n \ge 0$$ sao cho $$P_{ij}^n <0$$ và $$P_{ji}^m >0$$ 
+
+Từ các định nghĩa trên, ta xác định được trên không gian trạng thái `I` một quan hệ tương đương là quan hệ liên thông thỏa mãn
+
+1. $$i \leftrightarrow i$$ 
+2. $$i \to j \Rightarrow j \to i$$
+3. $$i \to j, j \to k \Rightarrow i \to k$$ 
+
+Chứng minh không có gì khó khăn nên ta bỏ qua.
+
+Từ đây, ta có thể phân lớp các trạng thái của xích Markov.
+
+**Định nghĩa 3: **Lớp $$C$$ được gọi là đóng nếu $$x \in C, x \to y \Rightarrow y \in C$$
+
+**Định nghĩa 4: ** Lớp các trạng thái $$C$$ được gọi là tối giản nếu 2 trạng thái bất kì trong $$C$$ đều liên thông
+
+Từ đây ta có thể phân lớp các trạng thái trong không gian trạng thái $$I$$ thành các thành phần nhỏ hơn
+
+---
+
+Tạm thời dừng ở đây đã, tớ cũng chỉ đưa ra các khái niệm đầu tiên về xích Markov, chi tiết hơn sẽ đến trong các bài sau
+
+## References
+
+[1]S. M. Ross, *Introduction to Probability models*, 10th ed. Elsevier, 2010, pp. 191 - 210.
+
+[2]R. M. Feldman and C. Valdez-Flores, *Applied Probability and Stochastic Proccesses*, 2nd ed. Springer, 2020.
