@@ -94,3 +94,9 @@ h4 {
   height: 14px;
   margin-top: 11px;
 }
+
+p img {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
