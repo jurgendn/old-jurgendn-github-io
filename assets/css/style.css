@@ -107,8 +107,6 @@ p img {
 
 /* Facebook comment */
 .fb-comments{
-  margin-left: 80px;
-  margin-bottom: 100px;
-  margin-top: 30px;
+  display: block;
   padding: 30px;
 }
