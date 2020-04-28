@@ -1,6 +1,8 @@
 ---
 layout: page
 ---
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
 <main class="page blog-post">
   <section class="clean-block clean-post dark">
     <div class="container">
@@ -36,6 +38,7 @@ layout: page
                 {% include share.html %}
               </div>
             </div>
+            <div class="fb-comments" data-href={{page.url}} data-numposts="5" data-width=""></div>
           </div>
           <div class=" d-flex flex-row flex-grow-1 justify-content-between align-items-stretch align-content-end
             align-self-end justify-content-lg-center align-items-lg-start" style="margin-top: 20px;">
