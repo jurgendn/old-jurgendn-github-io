@@ -104,3 +104,9 @@ p img {
   display: flex;
   flex-direction: column;
 }
+
+/* Facebook comment */
+.fb-comments{
+  margin-left: 80px;
+  padding: 30px;
+}
