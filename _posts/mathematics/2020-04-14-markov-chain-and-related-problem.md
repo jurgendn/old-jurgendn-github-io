@@ -131,11 +131,11 @@ Như đã đề cập ở bài viết trước, ta có thể xác định phân 
 
 Ta sẽ xác định $$\lambda_n$$ tại một số thời điểm để theo dõi biến động của lượng người truy cập. Ta có 
 
--  $$\lambda_1  = [0.2046, 0.2047, 0.2067, 0.1909, 0.193]$$
+-  $$\lambda_1  = [0.2046, 0.2047, 0.2067, 0.1909, 0.193]$$ 
 
--  $$\lambda_2 = [0.2106, 0.1989, 0.2037, 0.1754, 0.211]$$
+-  $$\lambda_2 = [0.2106, 0.1989, 0.2037, 0.1754, 0.211] $$
 
--  $$\lambda_3 = [0.2101, 0.1998, 0.2041, 0.1769, 0.2096]$$
+-  $$\lambda_3 = [0.2101, 0.1998, 0.2041, 0.1769, 0.2096] $$
 
   ...
 
@@ -150,23 +150,22 @@ Ta đặt ra câu hỏi:
 
 Tại thời điểm $$t = n$$, ta có
 
-
 $$
 \begin{cases}
 \lambda_n = \lambda_0P^n \\
 \lambda_{n+1} = \lambda_0P^{n+1} = \lambda_nP
 \end{cases}
 $$
+
+
 Do phân phối là không đổi, do đó ta có $$\lambda_{n+1} = \lambda_n = \lambda$$
 
 Từ đây, ta có
-
 
 $$
 \lambda P = \lambda
 $$
 Như vậy, phân phối dừng của một xích Markov $$(X_n)$$ được xác định như bởi hệ
-
 
 $$
 \begin{cases}
@@ -174,6 +173,7 @@ $$
 \sum_{i \in I}\lambda_i = 1
 \end{cases}
 $$
+
 Ví dụ với vấn đề nêu trên, phân phối dừng là $$\lambda = [0.2104543 , 0.19948658, 0.20391821, 0.17660766, 0.20953325]$$. Tức là sau một khoảng thời gian đủ dài, lượng người sử dụng mỗi website sẽ có phân bố như trên.
 
 Mọi việc có vẻ khá dễ dàng cho website của tôi. Tuy nhiên, giả như có một ngày nào đó, có một ông lớn tham gia vào mạng này. Bằng tiềm lực kinh tế mạnh mẽ, công ty này thuê rất nhiều content creators, giữ chân người dùng khủng khiếp đến mức người dùng không chuyển từ trang này sang trang khác nữa.
@@ -233,9 +233,11 @@ Một người đang ở `jurgendn.pw` có thể trở lại trang này trong t�
 Kí hiệu $$f_i$$ là xác suất xích xuất phát từ trạng thái $$i$$ và trở lại trạng thái $$i$$.
 
 Ta có:
+
 $$
 f_i = P(X_n = i \text{ với } n \text{ nào đó}|X_0 = i)
 $$
+
 Hiển nhiên nếu $$i$$ là recurrent thì $$f_i = 1$$ 
 
 Mặt khác, nếu $$i$$ là transient, khi đó mỗi một lần xích chạm tới trạng thái $$i$$ luôn luôn tồn tại một xác suất mà từ đó xích không trở lại trạng thái $$i$$ nữa và xác suất này bằng $$1-f_i$$. Do đó, xuất phát từ trạng thái $$i$$, xác suất để xích ở trạng thái $$i$$ đúng $$n$$ lần là $$\displaystyle f_i^{n-1} (1-f_i)$$. 
@@ -244,14 +246,17 @@ Từ đó, ta được nhận xét
 
 > Trạng thái $$i$$ là recurrent khi và chỉ khi bắt đầu xuất phát từ trạng thái $$i$$, trung bình xích trở về trạng thái $$i$$ là vô hạn lần
 
-Đặt 
+Đặt
+
 $$
 I_n = \begin{cases}
 1, \text{ if } X_n = i \\
 0, \text{ if } X_n \ne I
 \end{cases}
 $$
+
 Khi đó $$\sum_{i = 0}^{\infty}I_n$$ thể hiện số lần xích ở trạng thái $$i$$. Ta có:
+
 $$
 \begin{aligned}
 E\left[\sum_{n = 0}^{\infty}I_n|X_0 = i\right] & = \sum_{n = 0}^{\infty}E\left[I_n|X_0 = i\right] \\
@@ -259,6 +264,7 @@ E\left[\sum_{n = 0}^{\infty}I_n|X_0 = i\right] & = \sum_{n = 0}^{\infty}E\left[I
 & = \sum_{n = 0}^{\infty}P_{ii}^n
 \end{aligned}
 $$
+
 Từ điều trên, ta được hệ quả trực tiếp
 
 ***Hệ quả 1:*** Trạng thái $$i$$ là
@@ -281,18 +287,20 @@ Nếu $$C$$ có 1 phần tử, hiển nhiên đúng
 Nếu $$C$$ có ít nhất 2 phần tử, xét 2 trạng thái $$i, j \in C$$. Do $$i \leftrightarrow j$$ nên tồn tại 2 số nguyên $$m, n \ge 0$$ sao cho $$P_{ij}^{(n)} > 0$$ và $$P_{ji}^{(m)} > 0$$. 
 
 - Nếu $$i$$ là transient. Dễ thấy tồn tại $m, n$ sao cho $p_{ij}^{(n)} > 0$ và $p_{ji}^{(m)}>0$.Ta có 
+- 
   $$
   p_{ii}^{(n+r+m)} \ge p_{ij}^{(n)}p_{jj}^{(r)}p_{ji}^{(m)}
   $$
+  
   Do đó ta có
+  
   $$
   \sum_{r=1}^{\infty}p_{jj}^{(r)} \ge \frac{1}{p_{ij}^{(n)}p_{ji}^{(m)}}\sum_{r = 1}^{\infty}p_{ii}^{(r)} < \infty
   $$
+  
   Điều này chứng tỏ $$j$$ là transient.
 
 - Nếu $$i$$ là recurrent, ta có:
-
-  
 
 $$
 p_{jj}^{(n+r+m)} \ge p_{ji}^{(m)}p_{ii}^{(r)}p_{ij}^{(n)}
@@ -311,9 +319,11 @@ Ta có điều cần chứng minh.
 Phản chứng, giả sử tồn tại một trạng thái không là recurrent, Khi đó, theo `định lí 1` ta được tất cả các trạng thái đều là transient.
 
 Khi đó do lớp là transient nên tồn tại thời điểm $$n$$ và trạng thái $$k \notin C$$ nào đó để:
+
 $$
 P(X_n = k|X_0 = i) > 0
 $$
+
 Do $$C$$ là lớp đóng nên phải có $$k \in C$$, điều này là vô lí.
 
 Điều này dẫn đến giả thiết phản chứng sai, suy ra điều cần chứng minh
@@ -349,19 +359,19 @@ Khi đó
 
 **Định lí 5**
 
-> Cho `C` là một `communicating class` gồm các trạng thái $v_1, v_2,...,v_n$  Tập các đỉnh kề trong biểu diễn biểu diễn đồ thị chuyển trạng thái của các đỉnh $v_1, v_2,..,v_n$ lần lượt là $E_1, E_2, ...,E_n$.  Khi đó `C` là lớp đóng khi và chỉ khi $$C = \cup_{i=1}^{n}E_i$$
+> Cho `C` là một `communicating class` gồm các trạng thái $$v_1, v_2,...,v_n$$  Tập các đỉnh kề trong biểu diễn biểu diễn đồ thị chuyển trạng thái của các đỉnh $$v_1, v_2,..,v_n$$ lần lượt là $$E_1, E_2, ...,E_n$$.  Khi đó `C` là lớp đóng khi và chỉ khi $$C = \cup_{i=1}^{n}E_i$$
 
 *Chứng minh*
 
-`C` đóng $\Rightarrow$  $C = \cup_{i=1}^{n}E_i$.
+`C` đóng $$\Rightarrow$$  $$C = \cup_{i=1}^{n}E_i$$.
 
-Phản chứng, giả sử $C \neq \cup_{i=1}^{n}E_i$. Dễ thấy rằng $C \subset \cup_{i=1}^{n}E_i$. Do đó thấy rằng tồn tại một phần tử $t$ nào đó sao cho $t \in \cup_{i=1}^{n}E_i$ và $t \notin C$.
+Phản chứng, giả sử $$C \neq \cup_{i=1}^{n}E_i$$. Dễ thấy rằng $$C \subset \cup_{i=1}^{n}E_i$$. Do đó thấy rằng tồn tại một phần tử $$t$$ nào đó sao cho $$t \in \cup_{i=1}^{n}E_i$$ và $$t \notin C$$.
 
-Chứng tỏ tồn tại một tập $E_i$ nào đó chứa $t$, dẫn đến đỉnh $v_i$ kề với $i$. Do $v_i \in C$ và $C$ đóng nên $t \in C$, vô lí. 
+Chứng tỏ tồn tại một tập $$E_i$$ nào đó chứa $$t$$, dẫn đến đỉnh $$v_i$$ kề với $$i$$. Do $$v_i \in C$$ và $$C$$ đóng nên $$t \in C$$, vô lí. 
 
-$\displaystyle C = \cup_{i=1}^{n}\{E_i\} \Rightarrow$ `C` đóng.
+$$\displaystyle C = \cup_{i=1}^{n}\{E_i\} \Rightarrow$$ `C` đóng.
 
-Giả sử $C$ không phải là lớp đóng. Khi đó tồn tại một đỉnh $t$ nào đó kề với một đỉnh $v_i \in C$ và $t \notin C$. Điều này vô lí với giả thiết ban đầu.
+Giả sử $$C$$ không phải là lớp đóng. Khi đó tồn tại một đỉnh $$t$$ nào đó kề với một đỉnh $$v_i \in C$$ và $$t \notin C$$. Điều này vô lí với giả thiết ban đầu.
 
 Vậy ra có điều cần chứng minh
 
@@ -389,12 +399,14 @@ Gọi $$h_i$$ là xác suất để xuất phát từ trạng thái $$i$$ xích 
 - Nếu $$i \notin A$$, khi đó hiển nhiên rằng có $$h_i$$ khả năng xích chạm đến $$A$$ từ $$i$$, bên cạnh đó cũng có $$p_{ij}$$ khả năng xích ở trạng thái $$j$$, rồi từ đó có $$h_j$$ khả năng xích đến tập $$A$$ từ $$j$$.
 
 Như vậy, ta cần giải hệ phương trình sau để tìm ra các $$h_i$$.
+
 $$
 \begin{cases}
 h_i = 1, \text{ if } i \in A \\
 h_i = \sum_{i \in I\setminus A}p_{ij}h_j
 \end{cases}
 $$
+
 Cần phải nhớ rằng hệ trên không phải lúc nào cũng có nghiệm duy nhất, do đó các nghiệm của bài toán phải là các nghiệm không âm tối tiểu của hệ.
 
 Chắc nhiều bạn cũng xem siêu nhân rồi, nên là lấy luôn ví dụ như này cho gần gũi.
@@ -438,6 +450,7 @@ Thấy rằng nếu các chiến binh đã ở $$2$$ rồi thì $$h_2 = 1$$
 Khi con chuột đang ở $$1$$, nó có $$70\%$$ khả năng chuyển sang $$0$$, $$30\%$$ chuyển sang $$A$$.
 
 Từ đó ta có hệ phương trình sau:
+
 $$
 \begin{cases}
 h_0 = 0.4h_0 + 0.5h_1 + 0.1h_2 \\
@@ -446,7 +459,9 @@ h_2 = 1\\
 h_3 = h_3
 \end{cases}
 $$
+
 Thực hiện giải hệ phương trình ta thu được: 
+
 $$
 \begin{cases}
 h_0 = \frac{9}{24} + \frac{15}{24}h_3 \\
@@ -471,24 +486,30 @@ Ta định nghĩa thời điểm chạm là thời điểm xích chạm đến t
 Thời điểm chạm trung bình là số bước trung bình để xích chạm đến trạng thái $$j$$ kể từ khi xuất phát ở trạng thái $$i$$. 
 
 Kí hiệu $$H_i^A$$ là thời điểm chạm vào tập $$A$$ của xích $$(X_n)$$ khi xuất phát từ trạng thái $$i \in I$$. Theo đó, ta có:
+
 $$
 H_i^A = \inf\{n\ge 0, X_n \in A| X_0 = i\}
 $$
+
 Do đó thời điểm chạm trung bình được xác định bởi
+
 $$
 k_i = E(H_i^A) = \sum_{n = 0}^{\infty}P[H_i^A = n]
 $$
+
 Như vậy, ta có thể tính toán được khoảng thời gian trung bình một xích Markov đến một tập trạng thái nào đó, kể từ khi bắt đầu ở trạng thái $$i \in I$$ cho trước.
 
 Xét không gian trạng thái $$I$$ và tập $$A \subset I$$.
 
 Thời gian trung bình của xích xuất phát từ trạng thái $$i$$ đến tập $$A$$  được xác định là nghiệm tối tiểu của hệ sau
+
 $$
 \begin{cases}
 k_i = 0, \text{ if } i \in A\\
 k_i = 1 + \sum_{j \in A}p_{ij}k_j, \text{ if } i \notin A
 \end{cases}
 $$
+
 Ta xét một ví dụ khác. Lần này sẽ thực tế hơn một chút
 
 Hãy xét ví dụ sau
@@ -520,6 +541,7 @@ Hiển nhiên thấy rằng $$k_2 = 0$$ do xích đã ở 2 rồi nên sẽ khô
 - Tương tự với các trạng thái khác
 
 Như vậy ta có hệ phương trình sau:
+
 $$
 \begin{cases}
 k_0 = 1 + 0.7k_0 + 0.1k_1 + 0.1k_2 + 0.1k_3 \\
@@ -528,9 +550,11 @@ k_2 = 0 \\
 k_3 = k_3
 \end{cases}
 $$
+
 Các $$k_i$$ cần tìm chính là nghiệm tối tiểu của hệ phương trình trên.
 
 Giải hệ phương trình ta được
+
 $$
 \begin{cases}
 k_0 = \frac{50}{11} + \frac{6}{11}k_3\\
@@ -539,9 +563,11 @@ k_2 = 0 \\
 k_3 = k_3
 \end{cases}
 $$
+
 Do tính tối tiểu của nghiệm, ta chọn $$k_3 = 0$$
 
 Khi đó ta có các nghiệm như sau:
+
 $$
 \begin{cases}
 k_0 = \frac{50}{11} \\
@@ -550,6 +576,7 @@ k_2 = 0 \\
 k_3 = 0
 \end{cases}
 $$
+
 Vậy mất trung bình 4.55 bước để một người bắt đầu xuất phát ở `BigC` rồi sau đó đến `VinMart`
 
 
