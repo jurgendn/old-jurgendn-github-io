@@ -1,3 +1,9 @@
+---
+layout: post
+title: Markov Chain - Part 2
+categories: mathematics
+---
+
 Hê hê, bài trước ta đã đề cập đến những khái niệm tương đối cơ bản của xích Markov. Trong bài này, tasẽ sử dụng một vài vấn đề thực tế để khai thác các khía cạnh của xích Markov một cách trực quan hơn
 
 {:toc}
