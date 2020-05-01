@@ -113,7 +113,7 @@ Tại đây, ta cũng nhận thấy rằng nếu gọi trạng thái của ngư�
 
 Ta sẽ minh họa bằng đồ thị để trực quan hơn
 
-<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1586888109540.svg" alt="Graph" style="zoom:67%;" />
+<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1586888109540.svg" alt="Graph" style="zoom:67%;" />
 
 Nhìn thì khá là phức tạp, tuy nhiên ta sẽ chưa dùng đế đồ thị này ngay. Hãy đến với một số vấn đề trước.
 
@@ -135,7 +135,7 @@ Ta sẽ xác định $$\lambda_n$$ tại một số thời điểm để theo d�
 
 Dưới đây là đồ thị biểu diễn phân phối người dùng của từng website qua 10 bước
 
-<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector.svg" alt="state_vector" style="zoom:67%;" />
+<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector.svg" alt="state_vector" style="zoom:67%;" />
 
 Yo, không khó để nhận ra rằng từ bước thứ 4 trở đi, lượng người truy cập gần như là không thay đổi nữa. Lúc này, các giá trị $$\lambda_n$$ tuy không bằng nhau nhưng chúng rất gần nhau.
 Ta đặt ra câu hỏi:
@@ -191,7 +191,7 @@ Một số ít người dùng chuyển qua trang số $$6$$ này.
 
 Đồ thị phân phối được biểu diễn như sau
 
-<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector-1586893325658.svg" alt="state_vector" style="zoom:67%;" />
+<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector-1586893325658.svg" alt="state_vector" style="zoom:67%;" />
 
 Với sự tham gia của công ty mới này, chúng ta đứng trước nguy cơ mất sạch thị phần. Thực tế thì đúng là như vậy, nếu không có chiến lược gì cứu vãn, phân phối dừng sẽ như này
 
@@ -404,7 +404,7 @@ Chắc nhiều bạn cũng xem siêu nhân rồi, nên là lấy luôn ví dụ 
 >
 > Hãy tính xác suất siêu nhân phải sử dụng sức mạnh tinh thần và tình bạn từ trạng thái biến hình
 
-![Graph](../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1588320848011.png)
+![Graph](/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1588320848011.png)
 
 Đồ thị mô tả như trên
 
@@ -478,7 +478,10 @@ Xét không gian trạng thái $$I$$ và tập $$A \subset I$$.
 
 Thời gian trung bình của xích xuất phát từ trạng thái $$i$$ đến tập $$A$$  được xác định là nghiệm tối tiểu của hệ sau
 $$
-\be
+\begin{cases}
+k_i = 0, \text{ if } i \in A\\
+k_i = 1 + \sum_{j \in A}p_{ij}k_j, \text{ if } i \notin A
+\end{cases}
 $$
 Ta xét một ví dụ khác. Lần này sẽ thực tế hơn một chút
 
@@ -486,7 +489,7 @@ Hãy xét ví dụ sau
 
 > Một chuỗi các siêu thị gồm `BigC`. `Intimex`, `VinMart` và siêu thị đồ chơi `PowerRanger`. Xác suất người tiêu dùng chọn siêu thi cho lần mua sắm tiếp theo được cho bởi đồ thị sau:
 
-<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph.png" alt="Graph" style="zoom:67%;" />
+<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph.png" alt="Graph" style="zoom:67%;" />
 
 Tính thời gian trung bình 1 khác hàng đi siêu thị `BigC` và sau đó đến `VinMart`.
 
