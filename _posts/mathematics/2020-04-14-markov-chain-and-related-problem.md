@@ -2,6 +2,9 @@
 layout: post
 title: Markov Chain - Part 2
 categories: mathematics
+description: Phần tiếp theo về xích Markov và một số vấn đề gần gũi
+author: Jurgen
+toc: true
 ---
 
 Hê hê, bài trước ta đã đề cập đến những khái niệm tương đối cơ bản của xích Markov. Trong bài này, tasẽ sử dụng một vài vấn đề thực tế để khai thác các khía cạnh của xích Markov một cách trực quan hơn
@@ -286,7 +289,7 @@ Nếu $$C$$ có 1 phần tử, hiển nhiên đúng
 
 Nếu $$C$$ có ít nhất 2 phần tử, xét 2 trạng thái $$i, j \in C$$. Do $$i \leftrightarrow j$$ nên tồn tại 2 số nguyên $$m, n \ge 0$$ sao cho $$P_{ij}^{(n)} > 0$$ và $$P_{ji}^{(m)} > 0$$. 
 
-- Nếu $$i$$ là transient. Dễ thấy tồn tại $m, n$ sao cho $p_{ij}^{(n)} > 0$ và $p_{ji}^{(m)}>0$.Ta có 
+- Nếu $$i$$ là transient. Dễ thấy tồn tại $$m, n$$ sao cho $$p_{ij}^{(n)} > 0$$ và $$p_{ji}^{(m)}>0$$.Ta có 
 - 
   $$
   p_{ii}^{(n+r+m)} \ge p_{ij}^{(n)}p_{jj}^{(r)}p_{ji}^{(m)}
@@ -581,3 +584,10 @@ Vậy mất trung bình 4.55 bước để một người bắt đầu xuất ph
 
 
 
+---
+
+## References
+
+[1]S. M. Ross, *Introduction to Probability models*, 10th ed. Elsevier, 2010, pp. 191 - 210.
+
+[2]R. M. Feldman and C. Valdez-Flores, *Applied Probability and Stochastic Proccesses*, 2nd ed. Springer, 2010.
