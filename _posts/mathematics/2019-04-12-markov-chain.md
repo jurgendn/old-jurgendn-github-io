@@ -13,7 +13,7 @@ Viết linh tinh về môn này vậy
 
 ## Động lực thúc đẩy
 
-Rất nhiều sự kiện trong thực tế xảy ra một cách ngẫu nhiên, như sự thiết bị gặp lỗi, hay biến động trong sản lượng sản xuất, hay dễ hơn cả là tung đồng xu hoặc dice. Những sự kiện có thể xảy ra một cách ngẫu nhiên và độc lập, tuy nhiên phần nhiều trong thực tế, các sựkiện ngẫu nhiên xảy ra không hoàn toàn như vậy. Chúng ít nhiều đều có tác động bởi các trạng thái trong quá khứ. Cổ phiếu chứng khoán hoàn toàn không xảy ra ngẫu nhiên mà sẽ phụ thuộc ít nhiều vào trạng thái của nó trong các ngày trước đó.
+Rất nhiều sự kiện trong thực tế xảy ra một cách ngẫu nhiên, như sự thiết bị gặp lỗi, hay biến động trong sản lượng sản xuất, hay dễ hơn cả là tung đồng xu hoặc dice. Những sự kiện có thể xảy ra một cách ngẫu nhiên và độc lập, tuy nhiên phần nhiều trong thực tế, các sự kiện ngẫu nhiên xảy ra không hoàn toàn như vậy. Chúng ít nhiều đều có tác động bởi các trạng thái trong quá khứ. Cổ phiếu chứng khoán hoàn toàn không xảy ra ngẫu nhiên mà sẽ phụ thuộc ít nhiều vào trạng thái của nó trong các ngày trước đó.
 
 Tất nhiên, mức độ phụ thuộc vào quá khứ là khác nhau. Có những sự kiện phụ thuộc vào rất nhiều các trạng thái trong quá khứ, cũng có những sự kiện thì lại chỉ phụ thuộc vào những trạng thái gần đây. Trong khuôn khổ bài viết, ta sẽ chỉ xét đến những sự kiện chỉ phụ thuộc vào trạng thái ngay trước đó
 
@@ -161,7 +161,7 @@ Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể đư�
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
 
-![Graph](/post_image/mathematics/2019-04-12-markov-chain.assets/Graph.png)
+![Graph](../../post_image/mathematics/2019-04-12-markov-chain.assets/Graph.png)
 
 #### 2. Phương trình Chapman - Kolmogorov
 
@@ -188,7 +188,7 @@ Ta có điều cần chứng minh.
 
 Một cách minh họa bằng hình học có thể được biểu diễn như hình dưới đây
 
-<img src="/post_image/mathematics/2019-04-12-markov-chain.assets/image-20200413143221094.png" alt="image-20200413143221094" style="zoom:67%;" />
+<img src="../../post_image/mathematics/2019-04-12-markov-chain.assets/image-20200413143221094.png" alt="image-20200413143221094" style="zoom:67%;" />
 
 Một đường đi $$i \to j$$ sau $$m+n$$ bước có thể được biểu diễn thành 2 đường đi
 
