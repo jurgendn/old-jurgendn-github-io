@@ -255,8 +255,6 @@ Từ đây ta có thể phân lớp các trạng thái trong không gian trạng
 
 Tạm thời dừng ở đây đã, tớ cũng chỉ đưa ra các khái niệm đầu tiên về xích Markov, chi tiết hơn sẽ đến trong các bài sau.
 
-> Huyền ăn cứt
-
 ## References
 
 [1]S. M. Ross, *Introduction to Probability models*, 10th ed. Elsevier, 2010, pp. 191 - 210.
