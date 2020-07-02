@@ -1,3 +1,10 @@
+---
+title:			Mô hình Markov ẩn
+categories:		mathematics
+layout:			post
+description:	Vấn đề tán gái dưới một góc nhìn khác
+---
+
 # Hidden Markov Model
 
 Cũng tiện làm bài cuối kì tự dưng thấy cái Hidden Markov Model (HMM) này hay ho quá nên note lại vài dòng cho nhớ vậy
