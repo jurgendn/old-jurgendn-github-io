@@ -2,16 +2,12 @@
 layout: post
 title: Markov Chain - Part 2
 categories: mathematics
-description: Phần tiếp theo về xích Markov và một số vấn đề gần gũi
-author: Jurgen
-toc: true
 ---
 
 Hê hê, bài trước ta đã đề cập đến những khái niệm tương đối cơ bản của xích Markov. Trong bài này, tasẽ sử dụng một vài vấn đề thực tế để khai thác các khía cạnh của xích Markov một cách trực quan hơn
 
 - Table of Content
 {:toc}
-
 
 ## Bài toán
 
@@ -124,7 +120,7 @@ Tại đây, ta cũng nhận thấy rằng nếu gọi trạng thái của ngư�
 
 Ta sẽ minh họa bằng đồ thị để trực quan hơn
 
-<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1586888109540.svg" alt="Graph" style="zoom:67%;" />
+<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1586888109540.svg" alt="Graph" style="zoom:67%;" />
 
 Nhìn thì khá là phức tạp, tuy nhiên ta sẽ chưa dùng đế đồ thị này ngay. Hãy đến với một số vấn đề trước.
 
@@ -146,7 +142,7 @@ Ta sẽ xác định $$\lambda_n$$ tại một số thời điểm để theo d�
 
 Dưới đây là đồ thị biểu diễn phân phối người dùng của từng website qua 10 bước
 
-<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector.svg" alt="state_vector" style="zoom:67%;" />
+<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector.svg" alt="state_vector" style="zoom:67%;" />
 
 Yo, không khó để nhận ra rằng từ bước thứ 4 trở đi, lượng người truy cập gần như là không thay đổi nữa. Lúc này, các giá trị $$\lambda_n$$ tuy không bằng nhau nhưng chúng rất gần nhau.
 Ta đặt ra câu hỏi:
@@ -202,7 +198,7 @@ Một số ít người dùng chuyển qua trang số $$6$$ này.
 
 Đồ thị phân phối được biểu diễn như sau
 
-<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector-1586893325658.svg" alt="state_vector" style="zoom:67%;" />
+<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/state_vector-1586893325658.svg" alt="state_vector" style="zoom:67%;" />
 
 Với sự tham gia của công ty mới này, chúng ta đứng trước nguy cơ mất sạch thị phần. Thực tế thì đúng là như vậy, nếu không có chiến lược gì cứu vãn, phân phối dừng sẽ như này
 
@@ -291,7 +287,7 @@ Nếu $$C$$ có 1 phần tử, hiển nhiên đúng
 
 Nếu $$C$$ có ít nhất 2 phần tử, xét 2 trạng thái $$i, j \in C$$. Do $$i \leftrightarrow j$$ nên tồn tại 2 số nguyên $$m, n \ge 0$$ sao cho $$P_{ij}^{(n)} > 0$$ và $$P_{ji}^{(m)} > 0$$. 
 
-- Nếu $$i$$ là transient. Dễ thấy tồn tại $$m, n$$ sao cho $$p_{ij}^{(n)} > 0$$ và $$p_{ji}^{(m)}>0$$.Ta có 
+- Nếu $$i$$ là transient. Dễ thấy tồn tại $m, n$ sao cho $p_{ij}^{(n)} > 0$ và $p_{ji}^{(m)}>0$.Ta có 
 - 
   $$
   p_{ii}^{(n+r+m)} \ge p_{ij}^{(n)}p_{jj}^{(r)}p_{ji}^{(m)}
@@ -427,7 +423,7 @@ Chắc nhiều bạn cũng xem siêu nhân rồi, nên là lấy luôn ví dụ 
 >
 > Hãy tính xác suất siêu nhân phải sử dụng sức mạnh tinh thần và tình bạn từ trạng thái biến hình
 
-![Graph](/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1588320848011.png)
+![Graph](../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph-1588320848011.png)
 
 Đồ thị mô tả như trên
 
@@ -451,8 +447,6 @@ Thấy rằng nếu các chiến binh đã ở $$2$$ rồi thì $$h_2 = 1$$
   - 50% họ triệu hồi siêu thú khổng lồ và $$h_1$$ khả năng sử dụng sức mạnh tinh thần và tình bạn
   - 10% chuyển ngay sang trạng thái sức mạnh và $$h_2$$ khả năng chuyển sang trạng thái này.
 - Tương tự với các trạng thái khác
-
-Khi con chuột đang ở $$1$$, nó có $$70\%$$ khả năng chuyển sang $$0$$, $$30\%$$ chuyển sang $$A$$.
 
 Từ đó ta có hệ phương trình sau:
 
@@ -521,7 +515,7 @@ Hãy xét ví dụ sau
 
 > Một chuỗi các siêu thị gồm `BigC`. `Intimex`, `VinMart` và siêu thị đồ chơi `PowerRanger`. Xác suất người tiêu dùng chọn siêu thi cho lần mua sắm tiếp theo được cho bởi đồ thị sau:
 
-<img src="/post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph.png" alt="Graph" style="zoom:67%;" />
+<img src="../../post_image/mathematics/2020-04-14-markov-chain-and-related-problem.assets/Graph.png" alt="Graph" style="zoom:67%;" />
 
 Tính thời gian trung bình 1 khác hàng đi siêu thị `BigC` và sau đó đến `VinMart`.
 
@@ -586,10 +580,3 @@ Vậy mất trung bình 4.55 bước để một người bắt đầu xuất ph
 
 
 
----
-
-## References
-
-[1]S. M. Ross, *Introduction to Probability models*, 10th ed. Elsevier, 2010, pp. 191 - 210.
-
-[2]R. M. Feldman and C. Valdez-Flores, *Applied Probability and Stochastic Proccesses*, 2nd ed. Springer, 2010.
