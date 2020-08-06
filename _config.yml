@@ -44,7 +44,6 @@ kramdown:
     preview_as_code:   true
 
 # Comments
-disqus: jurgendn-pw
 defaults:
   - scope:
       type: posts
