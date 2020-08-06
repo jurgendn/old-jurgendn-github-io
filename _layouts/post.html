@@ -2,63 +2,83 @@
 layout: page
 ---
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0">
+</script>
 <main class="page blog-post">
   <section class="clean-block clean-post dark">
     <div class="container">
       <div class="block-content">
         {% if page.img_url %}
-          {% assign img_url = page.img_url %}
+        {% assign img_url = page.img_url %}
         {% else %}
-          {% assign cat = page.categories[0] %}
-          {% case cat %}
-            {% when 'mathematics' %}
-              {% assign img_url = "/assets/img/page/post_background/mathematics_background_default.jpeg" %}
-            {% when 'code' %}
-              {% assign img_url = "/assets/img/page/post_background/code_background_default.jpeg" %}           
-            {% when 'others' %}
-              {% assign img_url = "/assets/img/page/post_background/others_background_default.jpeg" %}
-            {% else %}
-              {% assign img_url = "/assets/img/page/background_about.jpg" %}
-          {% endcase %}         
+        {% assign cat = page.categories[0] %}
+        {% case cat %}
+        {% when 'mathematics' %}
+        {% assign img_url = "/assets/img/page/post_background/mathematics_background_default.jpeg" %}
+        {% when 'code' %}
+        {% assign img_url = "/assets/img/page/post_background/code_background_default.jpeg" %}
+        {% when 'others' %}
+        {% assign img_url = "/assets/img/page/post_background/others_background_default.jpeg" %}
+        {% else %}
+        {% assign img_url = "/assets/img/page/background_about.jpg" %}
+        {% endcase %}
         {% endif %}
         <!-- Insert image -->
         <div class="post-image" style="
         background-image: url({{img_url}}); background-position:initial; background-attachment:fixed;
       "></div>
-      <!-- Content -->
+        <!-- Content -->
         <div class="post-body">
           <h3 style="color: rgb(95, 3, 3);">{{page.title}}</h3>
           <div class="post-info">
             <span><a href="{{ author.web }}">{{ author.name }}</a></span>
           </div>
-              {{page.content}}
-              <div style="display: inline-block; border-top: 0.5px solid rgba(95, 3, 3, 0.5); margin-top: 50px;">
-                {% include share.html %}
-              </div><br>
-              <div class="fb-comments" data-href="{{ site.url }}{{page.url}}" data-numposts="5" data-width=""></div>
-            </div>
-          </div>
-          <div class=" d-flex flex-row flex-grow-1 justify-content-between align-items-stretch align-content-end
-            align-self-end justify-content-lg-center align-items-lg-start" style="margin-top: 20px;">
-          <div style="margin-right: 20px;width: 50vw;">
-            {% if page.previous.url %}
-            <p class="text-break text-left" style="margin: 0px;margin-right: 0px;padding: 10px;font-style: normal;">
-              <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-            </p>
-            {% endif %}
-          </div>
-          <div class="text-right d-flex d-lg-flex flex-row justify-content-lg-end"
-            style="margin-left: 20px;width: 50vw;">
-            {% if page.next.url %}
-            <p class="text-break text-right"
-              style="margin: 0;margin-left: 20px;padding: 10px;font-style: normal;">
-              <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-            </p>
-            {% endif %}
-          </div>
+          {{page.content}}
+          <div style="display: inline-block; border-top: 0.5px solid rgba(95, 3, 3, 0.5); margin-top: 50px;">
+            {% include share.html %}
+          </div><br>
+          <div id="disqus_thread"></div>
+          <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+              var d = document,
+                s = d.createElement('script');
+              s.src = 'https://jurgendn-pw.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+              by Disqus.</a></noscript>
+
         </div>
       </div>
+      <div class=" d-flex flex-row flex-grow-1 justify-content-between align-items-stretch align-content-end
+            align-self-end justify-content-lg-center align-items-lg-start" style="margin-top: 20px;">
+        <div style="margin-right: 20px;width: 50vw;">
+          {% if page.previous.url %}
+          <p class="text-break text-left" style="margin: 0px;margin-right: 0px;padding: 10px;font-style: normal;">
+            <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+          </p>
+          {% endif %}
+        </div>
+        <div class="text-right d-flex d-lg-flex flex-row justify-content-lg-end" style="margin-left: 20px;width: 50vw;">
+          {% if page.next.url %}
+          <p class="text-break text-right" style="margin: 0;margin-left: 20px;padding: 10px;font-style: normal;">
+            <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 </main>

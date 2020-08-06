@@ -43,6 +43,14 @@ kramdown:
     preview:           true
     preview_as_code:   true
 
+# Comments
+disqus: jurgendn-pw
+defaults:
+  - scope:
+      type: posts
+    values:
+      comments: true
+
 # Google Analytics
 google_analytics: UA-146891566-3
 # Exclude from processing.
