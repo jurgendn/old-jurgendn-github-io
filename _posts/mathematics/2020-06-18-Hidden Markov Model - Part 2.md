@@ -26,3 +26,59 @@ Qua nhiều lần gửi thư cho nàng, Khá tổng hợp lại và được b�
 
 [Hình ảnh mô hình]
 
+Các tham số cần ước lượng:
+
+1. Phân phối ban đầu $$\pi=\left(\pi_{1},\pi_{2}\right)$$, đây chính là xác suất của trạng thái xuất phát, rằng thời điểm đầu tiên nàng đang vui hay đang buồn
+2. Ma trận xác suất chuyển $$A=\left(a_{ij}\right)$$
+3. Phân phối phụ thuộc trạng thái $$P=\left(p_{1},p_{2}\right)$$.
+
+Sau khi ước lượng được các tham số trên, ta đã có thể mô hình hóa được quá trình gửi thư của con gái Huấn đại hiệp.
+
+## Xác định mô hình
+
+> Chương trình ở đây viết bằng `python`.
+
+Đầu tiên, xác định một class là HMM đã.
+
+```python
+import scipy as sp
+import numpy as np
+from scipy import stats
+from scipy.special import logsumexp
+from numpy import seterr
+
+
+class HMM:
+    def __init__(self, init_delta, init_theta, init_lambdas,tol=1e-6):
+        seterr(divide='ignore')
+        self.nstates = len(init_delta)
+        self.delta = np.log(init_delta)
+        self.theta = np.log(init_theta)
+        self.lambdas = np.array(init_lambdas)
+        self.tol = tol
+        seterr(divide='warn')
+```
+
+Vì số liệu tính toán rất nhỏ, đâu đó cỡ $$10^{-n}$$ với $$n$$ khá lớn, do đó ta sử dụng $$\log$$ để đảm bảo độ chính xác cũng như tránh trường hợp xác suất bằng $$0$$.
+
+Hàm dưới đây cho ta biết xác suất $$\log$$ xác suất $$P\left(O_{t}=i,H_{t=j}\mid\lambda\right)$$
+
+```python
+    def forward_lprobs(self, seq):
+        seterr(divide='ignore')
+        g_1 = [self._sp_lpmf(self.lambdas[i], seq)
+               for i in range(self.nstates)]
+        g_1 = np.add(self.delta, g_1)
+        glst = [g_1]
+        for i in range(1, len(seq)):
+            g_i = []
+            for j in range(self.nstates):
+                prev = np.add(glst[-1], self.theta[::, j])
+                prev = logsumexp(prev)
+                g_ij = prev + self._sp_lpmf(self.lambdas[j], seq)
+                g_i.append(g_ij)
+            glst.append(g_i)
+        seterr(divide='warn')
+        return np.array(glst)
+```
+
