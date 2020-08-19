@@ -1,11 +1,110 @@
 .text-info {
-  color: #eeeeee!important;
+  color: #eeeeee !important;
 }
 
 @media (min-width:340px) and (max-width: 575px) {
   .clean-block.clean-hero {
     min-height: 90vh;
   }
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: black;
+}
+
+.post-body h1 {
+  font-size: 1.75rem;
+}
+
+.post-body h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgb(239, 112, 96);
+}
+
+.post-body h2 span {
+  display: inline-block;
+  font-weight: bold;
+  background: rgb(239, 112, 96);
+  color: #ffffff;
+  padding: 3px 10px 1px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-right: 3px;
+}
+
+.post-body h2:after {
+  display: inline-block;
+  content: "";
+  vertical-align: bottom;
+  border-bottom: 36px solid #efebe9;
+  border-right: 20px solid transparent;
+}
+
+.post-body h3 {
+  font-size: 1.25rem;
+  border-bottom: 0.75px dashed #349fa4;
+}
+
+.post-body h3 span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.25rem;
+  background: #349fa4;
+  color: #ffffff;
+  padding: 3px 10px 1px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-right: 3px;
+}
+
+.post-body h3:after {
+  display: inline-block;
+  content: "";
+  vertical-align: bottom;
+  border-bottom: 36px solid #efebe9;
+  border-right: 20px solid transparent;
+}
+
+.post-body h4 {
+  font-size: 1.1rem;
+  border-bottom: 0.75px #fbba18;
+}
+
+.post-body h4 span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: #fbba18;
+  color: #ffffff;
+  padding: 3px 10px 1px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-right: 3px;
+}
+
+.post-body h4:after {
+  display: inline-block;
+  content: "";
+  vertical-align: bottom;
+  border-bottom: 36px solid #efebe9;
+  border-right: 20px solid transparent;
+}
+
+.post-body h5 {
+  font-size: 1rem;
+}
+
+.post-body h6 {
+  font-size: 1rem;
 }
 
 h2 {
@@ -21,7 +120,7 @@ h4 {
 }
 
 blockquote {
-  font-size: 100%!important;
+  font-size: 100% !important;
 }
 
 /*  Share button */
@@ -30,12 +129,14 @@ blockquote {
   vertical-align: middle;
   padding: 10px;
 }
+
 #share-buttons:after {
   content: "";
   display: block;
   clear: both;
 }
-#share-buttons > div {
+
+#share-buttons>div {
   position: relative;
   text-align: left;
   height: 36px;
@@ -43,58 +144,73 @@ blockquote {
   float: left;
   text-align: center;
 }
-#share-buttons > div > svg {
+
+#share-buttons>div>svg {
   height: 16px;
   fill: #d5d5d5;
   margin-top: 10px;
 }
-#share-buttons > div:hover {
+
+#share-buttons>div:hover {
   cursor: pointer;
 }
-#share-buttons > div.facebook:hover > svg {
+
+#share-buttons>div.facebook:hover>svg {
   fill: #3b5998;
 }
-#share-buttons > div.twitter:hover > svg {
+
+#share-buttons>div.twitter:hover>svg {
   fill: #55acee;
 }
-#share-buttons > div.linkedin:hover > svg {
+
+#share-buttons>div.linkedin:hover>svg {
   fill: #0077b5;
 }
-#share-buttons > div.pinterest:hover > svg {
+
+#share-buttons>div.pinterest:hover>svg {
   fill: #cb2027;
 }
-#share-buttons > div.gplus:hover > svg {
+
+#share-buttons>div.gplus:hover>svg {
   fill: #dd4b39;
 }
-#share-buttons > div.mail:hover > svg {
+
+#share-buttons>div.mail:hover>svg {
   fill: #7d7d7d;
 }
-#share-buttons > div.instagram:hover > svg {
+
+#share-buttons>div.instagram:hover>svg {
   fill: #c73b92;
 }
-#share-buttons > div.facebook > svg {
+
+#share-buttons>div.facebook>svg {
   height: 18px;
   margin-top: 9px;
 }
-#share-buttons > div.twitter > svg {
+
+#share-buttons>div.twitter>svg {
   height: 20px;
   margin-top: 8px;
 }
-#share-buttons > div.linkedin > svg {
+
+#share-buttons>div.linkedin>svg {
   height: 19px;
   margin-top: 7px;
 }
-#share-buttons > div.pinterest > svg {
+
+#share-buttons>div.pinterest>svg {
   height: 20px;
   margin-top: 9px;
 }
-#share-buttons > div.gplus > svg {
+
+#share-buttons>div.gplus>svg {
   height: 17px;
   margin-top: 9px;
   position: relative;
   left: 1px;
 }
-#share-buttons > div.mail > svg {
+
+#share-buttons>div.mail>svg {
   height: 14px;
   margin-top: 11px;
 }
