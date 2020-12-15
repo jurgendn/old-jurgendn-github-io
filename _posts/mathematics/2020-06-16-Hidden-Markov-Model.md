@@ -39,7 +39,8 @@ Như vậy, việc trả lời thư cho Khá phụ thuộc vào tâm trạng c�
 
 Ta sẽ lại có một chút thay đổi như sau
 
-![1](/post_image/mathematics/2020-06-16-Hidden-Markov-Model.assets/1.png)
+![1](/post_image/mathematics/2020-06-16-Hidden-Markov-Model.assets/1.png "Mô tả quá trình Khá nhận thư")
+{:.tofigure}
 
 Thế thì mối quan hệ giữa vui và không vui là gì? 
 
@@ -55,7 +56,8 @@ Một mô hình như trên được gọi là mô hình Markov ẩn.
 
 ## Mô hình Markov ẩn
 
-<img src="/post_image/mathematics/2020-06-16-Hidden-Markov-Model.assets/HMM.png" alt="HMM" style="zoom:50%;" />
+![Basic Model](/post_image/mathematics/2020-06-16-Hidden-Markov-Model.assets/HMM.png "Mô hình xích Markov ẩn")
+{:.tofigure}
 
 Trên đây là một mô hình tương đối chính xác về quá trình phát triển của một mô hình Markov ẩn
 

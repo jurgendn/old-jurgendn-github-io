@@ -237,7 +237,7 @@ figure {
 
 
 figcaption {
-  background-color: #222;
+  background-color: rgba(41, 30, 30, 0.795);
   color: #fff;
   font: italic 13px sans-serif;
   padding: 3px;
