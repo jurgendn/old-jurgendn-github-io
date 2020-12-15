@@ -223,3 +223,23 @@ p img {
 }
 
 /* Facebook comment */
+
+/* Figure Caption */
+figure {
+  /* border: thin #c0c0c0 solid; */
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  max-width: 80%;
+  margin: auto;
+  text-align: center
+}
+
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic 13px sans-serif;
+  padding: 3px;
+  text-align: center;
+}
