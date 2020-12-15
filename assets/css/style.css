@@ -226,20 +226,21 @@ p img {
 
 /* Figure Caption */
 figure {
-  /* border: thin #c0c0c0 solid; */
   display: flex;
   flex-flow: column;
-  padding: 10px;
-  max-width: 80%;
-  margin: auto;
-  text-align: center
+  padding: 6px;
+  max-width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 
 figcaption {
-  background-color: rgba(41, 30, 30, 0.795);
-  color: #fff;
-  font: italic 13px sans-serif;
-  padding: 3px;
+  background-color: rgba(245, 222, 179, 0.651);
+  border: 0.75px dashed rgba(59, 59, 59, 0.096);
+  color: rgb(85, 85, 85);
+  font: 14px sans-serif;
+  padding: 20px;
   text-align: center;
 }
