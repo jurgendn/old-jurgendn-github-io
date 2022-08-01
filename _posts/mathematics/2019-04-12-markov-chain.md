@@ -28,14 +28,14 @@ Tất nhiên, mức độ phụ thuộc vào quá khứ là khác nhau. Có nh�
 
 > Quá trình ngẫu nhiên là một dãy các biến ngẫu nhiên
 
-Một cách hình thức, một quá trình ngẫu nhiên là một dãy $$\{X_n\}_{n \ge 0}$$, trong đó $$X_i, i = \overline{0, n}$$ là các biến ngẫu nhiên
+Một cách hình thức, một quá trình ngẫu nhiên là một dãy $\{X_n\}_{n \ge 0}$, trong đó $X_i, i = \overline{0, n}$ là các biến ngẫu nhiên
 
 #### 2. Xích Markov
 
-> Xích Markov là một quá trình ngẫu nhiên với không gian trạng thái $$I = \{i_0, i_1,...,i_n\}$$ thỏa mãn
+> Xích Markov là một quá trình ngẫu nhiên với không gian trạng thái $I = \left\\{i_0, i_1,...,i_n\right\\}$ thỏa mãn
 > 
 > $$
-> P_(X_n = i_n|X_{n-1} = i_{n-1},...,X_0 = i_0) = P(X_n = i_n|X_{n-1} = i_{n-1})
+> P\left(X_n = i_n|X_{n-1} = i_{n-1},...,X_0 = i_0\right) = P\left(X_n = i_n|X_{n-1} = i_{n-1}\right)
 > $$
 
 Một cách hình thức hơn, một xích Markov là một quá trình ngẫu nhiên mà trong đó trạng thái của quá trình trong tương lai chỉ phụ thuộc vào trạng thái của nó trong hiện tại. Ta gọi tính chất này là tính Markov (Markovian)
@@ -45,7 +45,7 @@ Một cách hình thức hơn, một xích Markov là một quá trình ngẫu n
 > Xích Markov thuần nhất là xích Markov thỏa mãn
 >
 > $$
-> P(X_1 = j|X_0 = i) = P(X_{n+1}=j|X_n = i), \forall n \ge 0
+> P\left(X_1 = j|X_0 = i\right) = P\left(X_{n+1}=j|X_n = i\right), \forall n \ge 0
 > $$
 
 Điều này cho thấy xác suất các trạng thái xảy ra không phụ thuộc vào thời gian. Một cách khác, kết quả của việc tung đồng xu không phụ thuộc vào thời gian, xác suất xảy ra các trạng thái là không đổi. 
@@ -62,11 +62,7 @@ Tất nhiên là cái này khá dễ và ít quan trọng
 
 **Phân phối**
 
-Kí hiệu $$\lambda = \{\lambda_0,..,\lambda_n\}$$ là một phân phối của xích Markov với:
-
-$$
-\lambda_i = P(X = i)
-$$
+Kí hiệu $\lambda = \\{\lambda_0,..,\lambda_n\\}$ là một phân phối của xích Markov với $\lambda_i = P(X = i)$
 
 **Ma trận xác suất chuyển**
 
@@ -78,14 +74,14 @@ Ma trận xác suất chuyển $$P$$ là ma trận biểu diễn xác suất chu
 
 ##### Định nghĩa
 
-> Ma trận xác suất chuyển $$P$$ là ma trận biểu diễn xác suất xích chuyển sang một trạng thái từ trạng thái trước đó, là một ma trận $$n \times n$$ có các phần tử xác định như sau:
+> Ma trận xác suất chuyển $P$ là ma trận biểu diễn xác suất xích chuyển sang một trạng thái từ trạng thái trước đó, là một ma trận $n \times n$ có các phần tử xác định như sau:
 > 
 > $$
 > P_{ij} = P(X_{n+1} = j|X_n = i,...,X_0 = i_0) = P(X_{n+1} = j|X_n = i)
 > $$
 > 
 
-Ma trận xác suất chuyển sau $$n$$ bước kí hiệu là $$P^{(n)}$$ có các phần tử xác định bởi
+Ma trận xác suất chuyển sau $n$ bước kí hiệu là $P^{(n)}$ có các phần tử xác định bởi
 
 
 $$
@@ -95,14 +91,14 @@ $$
 
 ##### Tính chất
 
-1. $$p_{ij} \ge 0$$
-2. $$\sum_{j = 1}^{n}P_{ij} = 1, \forall i \in I$$
+1. $p_{ij} \ge 0$
+2. $\sum_{j = 1}^{n}P_{ij} = 1, \forall i \in I$
 
 Ta có định lí sau
 
 **Định lí 1: Phân phối hữu hạn chiều**
 
-> Dãy biến ngẫu nhiên $$(X_n)$$ nhận giá trị trong không gian trạng thái $$I$$ là một xích Markov $$(\lambda, P)$$ khi và chỉ khi với mọi $$i_0, i_1,..,i_n \in I$$ ta có
+> Dãy biến ngẫu nhiên $(X_n)$ nhận giá trị trong không gian trạng thái $I$ là một xích Markov $(\lambda, P)$ khi và chỉ khi với mọi $i_0, i_1,..,i_n \in I$ ta có
 > 
 > $$
 > P(X_0 = i_0, X_1 = i_1,...,X_n = i_n) = \lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}
@@ -110,48 +106,48 @@ Ta có định lí sau
 
 ***Chứng minh***
 
-$$\Rightarrow$$ Giả sử $$(X_n)$$ là xích Markov, khi đó ta có
+Giả sử $(X_n)$ là xích Markov, khi đó ta có
 
 $$
 \begin{aligned}
-P(X_0 = i_0, X_1 = i_1,...,X_n = i_n) & = P(X_0 = i_0)P(X_1 = i_1|X_0 = i_0)...P(X_n = i_n|X_{n-1} = i_{n-1},...,X_0 = i_0) \\
-& = P(X_0 = i_0)P(X_1 = i_1|X_0 = i_0)P(X_2 = i_2|X_1 = i_1)...P(X_n = i_n|X_{n-1} = i_{n-1}) \\
-& = \lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}
+P(X_0 = i_0, X_1 = i_1,...,X_n = i_n)  & = P(X_0 = i_0)P(X_1 = i_1|X_0 = i_0)...P(X_n = i_n|X_{n-1} = i_{n-1},...,X_0 = i_0) \newline
+                                       & = P(X_0 = i_0)P(X_1 = i_1|X_0 = i_0)P(X_2 = i_2|X_1 = i_1)...P(X_n = i_n|X_{n-1} = i_{n-1}) \newline
+                                       & = \lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}
 \end{aligned}
 $$
 
-$$\Leftarrow$$ Giả sử phân phối ban đầu $$P(X_0 = i_0) = \lambda_0$$.
+Giả sử phân phối ban đầu $P(X_0 = i_0) = \lambda_0$.
 
 Ta có
 
 $$
 \begin{aligned}
-P(X_n = i_n|X_{n-1} = i_{n-1},..,X_0 = i_0) & = \frac{P(X_0 = i_0, X_1 = i_1,...,X_n = i_n)}{P(X_0 = i_0, X_1 = i_1,...,X_{n-1} = i_{n-1})} \\
-& = \frac{\lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}}{\lambda_{i_0}P_{i_0i_1}...P_{i_{n-2}i_{n-1}}} \\
+P(X_n = i_n|X_{n-1} = i_{n-1},..,X_0 = i_0) & = \frac{P(X_0 = i_0, X_1 = i_1,...,X_n = i_n)}{P(X_0 = i_0, X_1 = i_1,...,X_{n-1} = i_{n-1})} \newline
+& = \frac{\lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}}{\lambda_{i_0}P_{i_0i_1}...P_{i_{n-2}i_{n-1}}} \newline
 & = P_{i_{n-1}i_n} = P(X_n = i_n|X_{n-1} = i_{n-1})
 \end{aligned}
 $$
 
-Điều này chứng tỏ $$(X_n)$$ có ma trận xác suất chuyển và thỏa mãn tính Markov
+Điều này chứng tỏ $(X_n)$ có ma trận xác suất chuyển và thỏa mãn tính Markov
 
 Ta có điều cần chứng minh
 
 ***Hệ quả***
 
-Với mọi $$m, n \ge 0$$ ta có:
+Với mọi $m, n \ge 0$ ta có:
 
-1. $$P(X_n = j) = (\lambda P^{(n)})_j$$
-2. $$P(X_n = j|X_0 = i) = P_(X_{m+n}= j|X_m = i) = P_{ij}^{(n)}$$
+1. $P(X_n = j) = (\lambda P^{(n)})_j$
+2. $P\left(X_n = j \mid X_0 = i\right) = P\left(X_{m+n}= j \mid X_m = i\right) = P_{ij}^{(n)}$
 
 ##### Ví dụ:
 
-Với không gian trạng thái `I = {0,1,2}` và ma trận xác suất chuyển $$P$$
+Với không gian trạng thái $I = \\{0,1,2\\}$ và ma trận xác suất chuyển $P$
 
-|      | 0    | 1    | 2    |
-| ---- | ---- | ---- | ---- |
-| 0    | 0.7  | 0.3  | 0    |
-| 1    | 0.2  | 0.6  | 0.2  |
-| 2    | 0.4  | 0.1  | 0.5  |
+|     | 0   | 1   | 2   |
+| --- | --- | --- | --- |
+| 0   | 0.7 | 0.3 | 0   |
+| 1   | 0.2 | 0.6 | 0.2 |
+| 2   | 0.4 | 0.1 | 0.5 |
 
 Hãy vẽ đồ thị minh họa sơ đồ chuyển trạng thái của xích Markov trên
 
@@ -160,6 +156,12 @@ Hãy vẽ đồ thị minh họa sơ đồ chuyển trạng thái của xích Ma
 Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể được biểu diễn bởi một đồ thị có hướng, có các đỉnh là các trạng thái và các cạnh nối các đỉnh có trọng số là các phần tử của ma trận xác suất chuyển. 
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
+
+```mermaid!
+flowchart LR
+   2 -- 0.5 --> 2 -- 0.1 --> 1 -- 0.6 --> 1 -- 0.2 --> 0
+   0(0) -- 0.3 --> 1(1) -- 0.2 --> 2(2) -- 0.4 --> 0 -- 0.7 --> 0
+```
 
 ![Graph](/post_image/mathematics/2019-04-12-markov-chain.assets/Graph.png)
 
@@ -220,10 +222,10 @@ Do đó tất cả $$i \to j$$ sau $$m+n$$ bước khi đi qua bước thứ $$m
 
 Không gian trạng thái `I = {0, 1}`, ma trận xác suất chuyển $$P$$
 
-|      | 0    | 1    |
-| ---- | ---- | ---- |
-| 0    | 0.7  | 0.3  |
-| 1    | 0.4  | 0.6  |
+|     | 0   | 1   |
+| --- | --- | --- |
+| 0   | 0.7 | 0.3 |
+| 1   | 0.4 | 0.6 |
 
 Xác suất để 4 ngày nữa trời mưa nếu hôm nay không mưa chính là $$P^{(4)}_{10} = P_{10}^{4} = 0.5668$$
 
