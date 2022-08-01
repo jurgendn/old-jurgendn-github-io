@@ -180,9 +180,9 @@ Ta có
 
 $$
 \begin{aligned}
-P_{ij}^{(m+n)} & = P(X_{m+n} = j|X_{0} = i) = \sum_{r \in I}P(X_{m+n} = j, X_m = r|X_0 = i) \\
-& = \sum_{r \in I}P(X_{m+n} = j|X_m = r, X_0 = i)P(X_m = r|X_0 = i) \\ 
-& = \sum_{r \in I}P(X_{m+n} = j|X_m = r)P(X+m = r|X_0 = i) \\
+P_{ij}^{(m+n)} & = P(X_{m+n} = j|X_{0} = i) = \sum_{r \in I}P(X_{m+n} = j, X_m = r|X_0 = i) \newline
+& = \sum_{r \in I}P(X_{m+n} = j|X_m = r, X_0 = i)P(X_m = r|X_0 = i) \newline
+& = \sum_{r \in I}P(X_{m+n} = j|X_m = r)P(X+m = r|X_0 = i) \newline
 & = \sum_{r \in I}P_{ir}^{(m)}P_{rj}^{(n)}
 \end{aligned}
 $$
@@ -192,26 +192,26 @@ Một cách minh họa bằng hình học có thể được biểu diễn như 
 
 <img src="/post_image/mathematics/2019-04-12-markov-chain.assets/image-20200413143221094.png" alt="image-20200413143221094" style="zoom:67%;" />
 
-Một đường đi $$i \to j$$ sau $$m+n$$ bước có thể được biểu diễn thành 2 đường đi
+Một đường đi $i \to j$ sau $$m+n$$ bước có thể được biểu diễn thành 2 đường đi
 
-- Đường đi từ $$i \to r$$
-- Đường đi từ $$r \to j$$
+- Đường đi từ $i \to r$
+- Đường đi từ $r \to j$
 
-Do đó tất cả $$i \to j$$ sau $$m+n$$ bước khi đi qua bước thứ $$m$$ đều phải đi qua một trong các trạng thái $$r \in I$$.
+Do đó tất cả $i \to j$ sau $m+n$ bước khi đi qua bước thứ $m$ đều phải đi qua một trong các trạng thái $r \in I$.
 
 **Tính chất**
 
-1. $$P^{(1)} = P$$
-   Điều này là khá hiển nhiên do $$P^{(1)}$$ là ma trận xác suất chuyển sau 1 bước
-2. $$P^{(n+1)} = P^{(1)}.P^{(n)} = P.P^{(n)}$$
+1. $P^{(1)} = P$
+   Điều này là khá hiển nhiên do $P^{(1)}$ là ma trận xác suất chuyển sau 1 bước
+2. $P^{(n+1)} = P^{(1)}.P^{(n)} = P.P^{(n)}$
    Hệ quả này suy ra trực tiếp từ phương trình CK
-3. $$P^{(n)} = P^{n}$$
+3. $P^{(n)} = P^{n}$
    Chứng minh khá dễ dàng thông qua quy nạp
-   - $$P^{(1)} = P$$
-   - $$P^{(n-1)} = P^{n-1}$$
-   - $$ P^{(n)} = P.P^{(n-1)} = P.P^{n-1} = P^{n}$$ 
+   - $P^{(1)} = P$
+   - $P^{(n-1)} = P^{n-1}$
+   - $ P^{(n)} = P.P^{(n-1)} = P.P^{n-1} = P^{n}$ 
 
-**Ví dụ:** Giả sử rằng thời tiết của ngày hôm sau phụ thuộc vào thời tiết của ngày hôm nay và không phụ thuộc vào những ngày trước đó. Cho rằng thời tiết gồm 2 trạng thái `I = {không mưa, mưa}` và
+**Ví dụ:** Giả sử rằng thời tiết của ngày hôm sau phụ thuộc vào thời tiết của ngày hôm nay và không phụ thuộc vào những ngày trước đó. Cho rằng thời tiết gồm 2 trạng thái $I = \\{không mưa, mưa\\}$ và
 
 - Hôm nay mưa, ngày hôm sau mưa với xác suất $$0.7$$
 - Hôm nay không mưa, ngày hôm sau không mưa với xác suất $$0.6$$
