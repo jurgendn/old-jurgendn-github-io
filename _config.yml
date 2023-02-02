@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -24,13 +24,36 @@ description: >- # this means to ignore newlines until "baseurl:"
   Chia sẻ sự đời của một sinh viên đang sống và học tập theo tấm gương đạo đức Hồ Chí Minh tại đại học Bách khoa Hà Nội
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.jurgendn.pw/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  jurgendn
+github_username: jurgendn
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-toc
+  - jekyll-spaceship
+
+jekyll-spaceship:
+  # default enabled processors
+  processors:
+    - table-processor
+    - mathjax-processor
+    - plantuml-processor
+    - mermaid-processor
+    - polyfill-processor
+    - media-processor
+    - emoji-processor
+    - element-processor
+  mermaid-processor:
+    mode: default # mode value 'pre-fetch' for fetching image at building stage
+    css:
+      class: mermaid
+    syntax:
+      code: "mermaid!"
+      custom: ["@startmermaid", "@endmermaid"]
+    config:
+      theme: base
+    src: https://mermaid.ink/svg/
 
 permalink: /:categories/:year/:month/:day/:title/
 
@@ -38,10 +61,10 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  math_engine:         mathjax
+  math_engine: mathjax
   math_engine_opts:
-    preview:           true
-    preview_as_code:   true
+    preview: true
+    preview_as_code: true
 
 # Comments
 defaults:
