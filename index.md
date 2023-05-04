@@ -16,7 +16,7 @@ permalink: /
             </div>
             <div class="row justify-content-center">
                 <div class="col-sm-6 col-lg-4 d-flex justify-content-lg-center align-items-lg-center">
-                    <div class="card clean-card text-center"><img class="card-img-top w-100 d-block d-flex flex-column justify-content-lg-center align-items-lg-center" src="assets/img/avatars/Profile-2.JPG"></div>
+                    <div class="card clean-card text-center"><img class="card-img-top img-fluid w-100 d-block d-flex flex-column justify-content-lg-center align-items-lg-center" style="object-fit: cover; object-position: center; height: 100%" src="assets/img/avatars/Profile-2.JPG"></div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="card clean-card text-center">
