@@ -30,7 +30,7 @@
   border-bottom: 2px solid rgb(239, 112, 96);
 }
 
-.post-body h2 span {
+/* .post-body h2 span {
   display: inline-block;
   font-weight: bold;
   background: rgb(239, 112, 96);
@@ -39,22 +39,22 @@
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   margin-right: 3px;
-}
+} */
 
-.post-body h2:after {
+/* .post-body h2:after {
   display: inline-block;
   content: "";
   vertical-align: bottom;
   border-bottom: 36px solid #efebe9;
   border-right: 20px solid transparent;
-}
+} */
 
 .post-body h3 {
   font-size: 1.25rem;
   border-bottom: 0.75px dashed #349fa4;
 }
 
-.post-body h3 span {
+/* .post-body h3 span {
   display: inline-block;
   font-weight: bold;
   font-size: 1.25rem;
@@ -66,20 +66,20 @@
   margin-right: 3px;
 }
 
-.post-body h3:after {
+/* .post-body h3:after {
   display: inline-block;
   content: "";
   vertical-align: bottom;
   border-bottom: 36px solid #efebe9;
   border-right: 20px solid transparent;
-}
+} */ */
 
 .post-body h4 {
   font-size: 1.1rem;
   border-bottom: 0.75px #fbba18;
 }
 
-.post-body h4 span {
+/* .post-body h4 span {
   display: inline-block;
   font-weight: bold;
   font-size: 1.1rem;
@@ -97,7 +97,7 @@
   vertical-align: bottom;
   border-bottom: 36px solid #efebe9;
   border-right: 20px solid transparent;
-}
+} */
 
 .post-body h5 {
   font-size: 1rem;
