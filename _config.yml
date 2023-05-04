@@ -27,33 +27,7 @@ url: "https://www.jurgendn.pw/" # the base hostname & protocol for your site, e.
 github_username: jurgendn
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-toc
-  - jekyll-spaceship
 
-jekyll-spaceship:
-  # default enabled processors
-  processors:
-    - table-processor
-    - mathjax-processor
-    - plantuml-processor
-    - mermaid-processor
-    - polyfill-processor
-    - media-processor
-    - emoji-processor
-    - element-processor
-  mermaid-processor:
-    mode: default # mode value 'pre-fetch' for fetching image at building stage
-    css:
-      class: mermaid
-    syntax:
-      code: "mermaid!"
-      custom: ["@startmermaid", "@endmermaid"]
-    config:
-      theme: base
-    src: https://mermaid.ink/svg/
 
 permalink: /:categories/:year/:month/:day/:title/
 
@@ -61,10 +35,10 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  math_engine: mathjax
-  math_engine_opts:
-    preview: true
-    preview_as_code: true
+  # math_engine: mathjax
+  # math_engine_opts:
+  #   preview: true
+  #   preview_as_code: true
 
 # Comments
 defaults:

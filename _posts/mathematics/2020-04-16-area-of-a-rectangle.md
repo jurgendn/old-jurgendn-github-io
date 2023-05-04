@@ -35,7 +35,7 @@ Việc có những quy ước cơ bản là điều cần thiết, ví dụ như
 
 ### 2. Hình chữ nhật có cạnh là số hữu tỉ ($$\mathbb{Q}$$)
 
-Những ```hình chữ nhật``` có độ dài cạnh là các số hữu tỉ cũng đơn giản thôi. Giả sử rằng cần tính diện tích của ```hình chữ nhật``` có các cạnh là $$\displaystyle \frac{a}{c}, \frac{b}{d}$$.  Ta sẽ xếp $$cd$$ hình này lại để thu được một hình chữ nhật có kích thước $$a\times b$$. 
+Những ```hình chữ nhật``` có độ dài cạnh là các số hữu tỉ cũng đơn giản thôi. Giả sử rằng cần tính diện tích của ```hình chữ nhật``` có các cạnh là $$\displaystyle \frac{a}{c}, \frac{b}{d}$$.  Ta sẽ xếp $$cd$$ hình này lại để thu được một hình chữ nhật có kích thước \[a\times b\]. 
 
 <img src="/post_image/mathematics/2020-04-16-area-of-a-rectangle.assets/rect_quotient.png" alt="rect_quotient" style="zoom:24%;" />
 
