@@ -23,6 +23,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 <script src="/assets/js/smoothproducts.min.js"></script>
 <script src="/assets/js/theme.js"></script>
+<script>
+  MathJax.Hub.Config({
+    AsciiMath: {
+      fixphi: true,
+      useMathMLspacing: true,
+      displaystyle: true,
+      decimalsign: "."
+    },
+    extensions: ['asciimath2jax.js'],
+    jax: ['input/TeX', 'input/AsciiMath', 'output/HTML-CSS']
+  });
+</script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 </script>

@@ -28,12 +28,12 @@ Tất nhiên, mức độ phụ thuộc vào quá khứ là khác nhau. Có nh�
 
 > Quá trình ngẫu nhiên là một dãy các biến ngẫu nhiên
 
-Một cách hình thức, một quá trình ngẫu nhiên là một dãy $\{X_n\}_{n \ge 0}$, trong đó $X_i, i = \overline{0, n}$ là các biến ngẫu nhiên
+Một cách hình thức, một quá trình ngẫu nhiên là một dãy $$\{X_n\}_{n \ge 0}$$, trong đó $$X_i, i = \overline{0, n}$$ là các biến ngẫu nhiên
 
 #### 2. Xích Markov
 
 > Xích Markov là một quá trình ngẫu nhiên với không gian trạng thái $I = \left\\{i_0, i_1,...,i_n\right\\}$ thỏa mãn
-> 
+>
 > $$
 > P\left(X_n = i_n|X_{n-1} = i_{n-1},...,X_0 = i_0\right) = P\left(X_n = i_n|X_{n-1} = i_{n-1}\right)
 > $$
@@ -48,11 +48,11 @@ Một cách hình thức hơn, một xích Markov là một quá trình ngẫu n
 > P\left(X_1 = j|X_0 = i\right) = P\left(X_{n+1}=j|X_n = i\right), \forall n \ge 0
 > $$
 
-Điều này cho thấy xác suất các trạng thái xảy ra không phụ thuộc vào thời gian. Một cách khác, kết quả của việc tung đồng xu không phụ thuộc vào thời gian, xác suất xảy ra các trạng thái là không đổi. 
+Điều này cho thấy xác suất các trạng thái xảy ra không phụ thuộc vào thời gian. Một cách khác, kết quả của việc tung đồng xu không phụ thuộc vào thời gian, xác suất xảy ra các trạng thái là không đổi.
 
 Ta cũng chỉ bàn đến những xích Markov thuần nhất trong khuôn khổ bài viết
 
-##### 2.2. Không gian trạng thái. Ma trận xác suất chuyển.
+##### 2.2. Không gian trạng thái. Ma trận xác suất chuyển
 
 **Không gian trạng thái**
 
@@ -62,7 +62,7 @@ Tất nhiên là cái này khá dễ và ít quan trọng
 
 **Phân phối**
 
-Kí hiệu $\lambda = \\{\lambda_0,..,\lambda_n\\}$ là một phân phối của xích Markov với $\lambda_i = P(X = i)$
+Kí hiệu $$ \displaystyle \lambda = \\{\lambda_0,..,\lambda_n\\}$$ là một phân phối của xích Markov với $$\lambda_i = P(X = i)$$
 
 **Ma trận xác suất chuyển**
 
@@ -75,38 +75,36 @@ Ma trận xác suất chuyển $$P$$ là ma trận biểu diễn xác suất chu
 ##### Định nghĩa
 
 > Ma trận xác suất chuyển $P$ là ma trận biểu diễn xác suất xích chuyển sang một trạng thái từ trạng thái trước đó, là một ma trận $n \times n$ có các phần tử xác định như sau:
-> 
+>
 > $$
 > P_{ij} = P(X_{n+1} = j|X_n = i,...,X_0 = i_0) = P(X_{n+1} = j|X_n = i)
 > $$
-> 
+>
 
 Ma trận xác suất chuyển sau $n$ bước kí hiệu là $P^{(n)}$ có các phần tử xác định bởi
-
 
 $$
 P_{ij}^{(n)} = P(X_n = j|X_0 = i)
 $$
 
-
 ##### Tính chất
 
-1. $p_{ij} \ge 0$
-2. $\sum_{j = 1}^{n}P_{ij} = 1, \forall i \in I$
+1. $$p_{ij} \ge 0$$
+2. $$\sum_{j = 1}^{n}P_{ij} = 1, \forall i \in I$$
 
 Ta có định lí sau
 
 **Định lí 1: Phân phối hữu hạn chiều**
 
-> Dãy biến ngẫu nhiên $(X_n)$ nhận giá trị trong không gian trạng thái $I$ là một xích Markov $(\lambda, P)$ khi và chỉ khi với mọi $i_0, i_1,..,i_n \in I$ ta có
-> 
+> Dãy biến ngẫu nhiên $(X_n)$ nhận giá trị trong không gian trạng thái $I$ là một xích Markov $$(\lambda, P)$$ khi và chỉ khi với mọi $$i_0, i_1,..,i_n \in I$$ ta có
+>
 > $$
 > P(X_0 = i_0, X_1 = i_1,...,X_n = i_n) = \lambda_{i_0}P_{i_0i_1}...P_{i_{n-1}i_n}
 > $$
 
 ***Chứng minh***
 
-Giả sử $(X_n)$ là xích Markov, khi đó ta có
+Giả sử $$(X_n)$$ là xích Markov, khi đó ta có
 
 $$
 \begin{aligned}
@@ -116,7 +114,7 @@ P(X_0 = i_0, X_1 = i_1,...,X_n = i_n)  & = P(X_0 = i_0)P(X_1 = i_1|X_0 = i_0)...
 \end{aligned}
 $$
 
-Giả sử phân phối ban đầu $P(X_0 = i_0) = \lambda_0$.
+Giả sử phân phối ban đầu $$P(X_0 = i_0) = \lambda_0$$.
 
 Ta có
 
@@ -128,7 +126,7 @@ P(X_n = i_n|X_{n-1} = i_{n-1},..,X_0 = i_0) & = \frac{P(X_0 = i_0, X_1 = i_1,...
 \end{aligned}
 $$
 
-Điều này chứng tỏ $(X_n)$ có ma trận xác suất chuyển và thỏa mãn tính Markov
+Điều này chứng tỏ $$(X_n)$$ có ma trận xác suất chuyển và thỏa mãn tính Markov
 
 Ta có điều cần chứng minh
 
@@ -136,12 +134,12 @@ Ta có điều cần chứng minh
 
 Với mọi $m, n \ge 0$ ta có:
 
-1. $P(X_n = j) = (\lambda P^{(n)})_j$
-2. $P\left(X_n = j \mid X_0 = i\right) = P\left(X_{m+n}= j \mid X_m = i\right) = P_{ij}^{(n)}$
+1. $$P(X_n = j) = (\lambda P^{(n)})_j$$
+2. $$P\left(X_n = j \mid X_0 = i\right) = P\left(X_{m+n}= j \mid X_m = i\right) = P_{ij}^{(n)}$$
 
-##### Ví dụ:
+##### Ví dụ
 
-Với không gian trạng thái $I = \\{0,1,2\\}$ và ma trận xác suất chuyển $P$
+Với không gian trạng thái $$I = \\{0,1,2\\}$$ và ma trận xác suất chuyển $P$
 
 |     | 0   | 1   | 2   |
 | --- | --- | --- | --- |
@@ -153,17 +151,16 @@ Hãy vẽ đồ thị minh họa sơ đồ chuyển trạng thái của xích Ma
 
 ***Proof***
 
-Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể được biểu diễn bởi một đồ thị có hướng, có các đỉnh là các trạng thái và các cạnh nối các đỉnh có trọng số là các phần tử của ma trận xác suất chuyển. 
+Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể được biểu diễn bởi một đồ thị có hướng, có các đỉnh là các trạng thái và các cạnh nối các đỉnh có trọng số là các phần tử của ma trận xác suất chuyển.
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
 
-```mermaid!
+
+<pre class="mermaid">
 flowchart LR
    2 -- 0.5 --> 2 -- 0.1 --> 1 -- 0.6 --> 1 -- 0.2 --> 0
    0(0) -- 0.3 --> 1(1) -- 0.2 --> 2(2) -- 0.4 --> 0 -- 0.7 --> 0
-```
-
-![Graph](/post_image/mathematics/2019-04-12-markov-chain.assets/Graph.png)
+</pre>
 
 #### 2. Phương trình Chapman - Kolmogorov
 
@@ -171,12 +168,11 @@ flowchart LR
 > $$
 > P_{ij}^{(m+n)} = \sum_{r \in I}P_{ir}^{(m)}P_{rj}^{(n)}
 > $$
-> 
+>
 
 ***Chứng minh***
 
 Ta có
-
 
 $$
 \begin{aligned}
@@ -192,31 +188,31 @@ Một cách minh họa bằng hình học có thể được biểu diễn như 
 
 <img src="/post_image/mathematics/2019-04-12-markov-chain.assets/image-20200413143221094.png" alt="image-20200413143221094" style="zoom:67%;" />
 
-Một đường đi $i \to j$ sau $$m+n$$ bước có thể được biểu diễn thành 2 đường đi
+Một đường đi $$i \to j$$ sau $$m+n$$ bước có thể được biểu diễn thành 2 đường đi
 
-- Đường đi từ $i \to r$
-- Đường đi từ $r \to j$
+- Đường đi từ $$i \to r$$
+- Đường đi từ $$r \to j$$
 
-Do đó tất cả $i \to j$ sau $m+n$ bước khi đi qua bước thứ $m$ đều phải đi qua một trong các trạng thái $r \in I$.
+Do đó tất cả $$i \to j$$ sau $$m+n$$ bước khi đi qua bước thứ $m$ đều phải đi qua một trong các trạng thái $$r \in I$$.
 
 **Tính chất**
 
-1. $P^{(1)} = P$
-   Điều này là khá hiển nhiên do $P^{(1)}$ là ma trận xác suất chuyển sau 1 bước
-2. $P^{(n+1)} = P^{(1)}.P^{(n)} = P.P^{(n)}$
+1. $$P^{(1)} = P$$
+   Điều này là khá hiển nhiên do $$P^{(1)}$$ là ma trận xác suất chuyển sau 1 bước
+2. $$P^{(n+1)} = P^{(1)}.P^{(n)} = P.P^{(n)}$$
    Hệ quả này suy ra trực tiếp từ phương trình CK
-3. $P^{(n)} = P^{n}$
+3. $$P^{(n)} = P^{n}$$
    Chứng minh khá dễ dàng thông qua quy nạp
-   - $P^{(1)} = P$
-   - $P^{(n-1)} = P^{n-1}$
-   - $ P^{(n)} = P.P^{(n-1)} = P.P^{n-1} = P^{n}$ 
+   - \\(P^{(1)} = P\\)
+   - \\(P^{(n-1)} = P^{n-1}\\)
+   - \\(P^{(n)} = P.P^{(n-1)} = P.P^{n-1} = P^{n}\\)
 
-**Ví dụ:** Giả sử rằng thời tiết của ngày hôm sau phụ thuộc vào thời tiết của ngày hôm nay và không phụ thuộc vào những ngày trước đó. Cho rằng thời tiết gồm 2 trạng thái $I = \\{không mưa, mưa\\}$ và
+**Ví dụ:** Giả sử rằng thời tiết của ngày hôm sau phụ thuộc vào thời tiết của ngày hôm nay và không phụ thuộc vào những ngày trước đó. Cho rằng thời tiết gồm 2 trạng thái $$I$$ = \{không mưa, mưa\} và
 
 - Hôm nay mưa, ngày hôm sau mưa với xác suất $$0.7$$
 - Hôm nay không mưa, ngày hôm sau không mưa với xác suất $$0.6$$
 
->  Biết rằng hôm nay không mưa, tính xác suất để 4 ngày nữa trời sẽ mưa.
+> Biết rằng hôm nay không mưa, tính xác suất để 4 ngày nữa trời sẽ mưa.
 
 Để cho tiện, ta sẽ coi mưa ứng với trạng thái 0, không mưa ứng với trạng thái 1
 
@@ -235,13 +231,13 @@ Trong không gian trạng thái $$I$$, ta không chỉ quan tâm đến từng t
 
 **Định nghĩa 1:** Trạng thái $$i$$ có thể tới được trạng thái $$j$$  nếu tồn tại $$n$$ sao cho $$P_{ij}^{n} > 0$$
 
-**Định nghĩa 2:** Các trạng thái $$i$$ và $$j$$ được gọi là liên thông nếu tồn tại $$m, n \ge 0$$ sao cho $$P_{ij}^n <0$$ và $$P_{ji}^m >0$$ 
+**Định nghĩa 2:** Các trạng thái $$i$$ và $$j$$ được gọi là liên thông nếu tồn tại $$m, n \ge 0$$ sao cho $$P_{ij}^n <0$$ và $$P_{ji}^m >0$$
 
 Từ các định nghĩa trên, ta xác định được trên không gian trạng thái `I` một quan hệ tương đương là quan hệ liên thông thỏa mãn
 
-1. $$i \leftrightarrow i$$ 
-2. $$i \to j \Rightarrow j \to i$$
-3. $$i \to j, j \to k \Rightarrow i \to k$$ 
+1. \\(i \leftrightarrow i\\)
+2. \\(i \to j \Rightarrow j \to i\\)
+3. \\(i \to j, j \to k \Rightarrow i \to k\\)
 
 Chứng minh không có gì khó khăn nên ta bỏ qua.
 
