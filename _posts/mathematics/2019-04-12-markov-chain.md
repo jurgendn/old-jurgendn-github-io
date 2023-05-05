@@ -89,8 +89,8 @@ $$
 
 ##### Tính chất
 
-1. $$p_{ij} \ge 0$$
-2. $$\sum_{j = 1}^{n}P_{ij} = 1, \forall i \in I$$
+1. \\(p_{ij} \ge 0\\)
+2. \\(\sum_{j = 1}^{n}P_{ij} = 1, \forall i \in I\\)
 
 Ta có định lí sau
 
@@ -132,10 +132,10 @@ Ta có điều cần chứng minh
 
 ***Hệ quả***
 
-Với mọi $m, n \ge 0$ ta có:
+Với mọi \\(m, n \ge 0\\) ta có:
 
-1. $$P(X_n = j) = (\lambda P^{(n)})_j$$
-2. $$P\left(X_n = j \mid X_0 = i\right) = P\left(X_{m+n}= j \mid X_m = i\right) = P_{ij}^{(n)}$$
+1. \\(P(X_n = j) = (\lambda P^{(n)})_j\\)
+2. \\(P\left(X_n = j \mid X_0 = i\right) = P\left(X_{m+n}= j \mid X_m = i\right) = P_{ij}^{(n)}\\)
 
 ##### Ví dụ
 
@@ -154,7 +154,6 @@ Hãy vẽ đồ thị minh họa sơ đồ chuyển trạng thái của xích Ma
 Cái này thì khá đơn giản. Một xích Markov hoàn toàn có thể được biểu diễn bởi một đồ thị có hướng, có các đỉnh là các trạng thái và các cạnh nối các đỉnh có trọng số là các phần tử của ma trận xác suất chuyển.
 
 Ta có thể biểu diễn xích trên bằng đồ thị dưới đây
-
 
 <pre class="mermaid">
 flowchart LR
@@ -182,6 +181,7 @@ P_{ij}^{(m+n)} & = P(X_{m+n} = j|X_{0} = i) = \sum_{r \in I}P(X_{m+n} = j, X_m =
 & = \sum_{r \in I}P_{ir}^{(m)}P_{rj}^{(n)}
 \end{aligned}
 $$
+
 Ta có điều cần chứng minh.
 
 Một cách minh họa bằng hình học có thể được biểu diễn như hình dưới đây
