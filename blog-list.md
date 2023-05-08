@@ -38,7 +38,7 @@ permalink: /blog-list/
                   font-size: 40px;
                 "
               >
-                {% translate postList %}
+                {% t postList %}
               </h2>
               <p
                 class="text-center"
@@ -93,7 +93,7 @@ permalink: /blog-list/
               <p>{{post.description}}</p>
               <button class="btn btn-outline-primary btn-sm" type="button" style="width: 100px;"><a
                   href="{{ post.url | relative_url }}">
-                  {% translate readMore %}</a>
+                  {% t readMore %}</a>
               </button>
             </div>
           </div>
