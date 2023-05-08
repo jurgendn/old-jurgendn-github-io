@@ -1,18 +1,18 @@
 <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-white clean-navbar">
   <div class="container">
     <a href="{{site.baseurl}}/""
-      ><img src="/assets/img/icons/icon@2x.png" style="width: 50px;" /></a><button data-toggle="collapse"
+      ><img src=" /assets/img/icons/icon@2x.png" style="width: 50px;" /></a><button data-toggle="collapse"
       class="navbar-toggler" data-target="#navcol-1">
       <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item" role="presentation">
-          <a class="nav-link active" href="{{site.baseurl}}/">Home</a>
+          <a class="nav-link active" href="{{site.baseurl}}/">{% translate nav.home %}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
-            href="{{site.baseurl}}/blog-list">Blog&nbsp;</a>
+            href="{{site.baseurl}}/blog-list">{% translate nav.blog %}&nbsp;</a>
           <div class="dropdown-menu dropdown-menu-left" role="menu">
             <a class="dropdown-item text-uppercase" role="presentation" href="{{site.baseurl}}/category/mathematics"
               style="
@@ -39,9 +39,20 @@
           </div>
         </li>
         <li class="nav-item" role="presentation">
-          <a class="nav-link active" href="{{site.baseurl}}/#about">About</a>
+          <a class="nav-link active" href="{{site.baseurl}}/#about">{% translate nav.about %}</a>
         </li>
       </ul>
     </div>
   </div>
+  {% for lang in site.languages %}
+  {% if lang == site.active_lang %}
+  {{ lang }}
+  {% else %}
+  {% if lang == site.default_lang %}
+  <a href=" {{ page.url }}">{{ lang }}</a>
+  {% else %}
+  <a href="/{{ lang }}{{ page.url }}">{{ lang }}</a>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
 </nav>

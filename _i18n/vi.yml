@@ -1,0 +1,19 @@
+global:
+  vietnam: vi
+  english: en
+
+nav:
+  home: Trang chủ
+  blog: Bài viết
+  about: About??
+
+titles:
+  seoTitle: Blog trẻ thơ
+
+readMore: Đọc tiếp
+postList: Các bài viết
+about: About
+
+basicInfo:
+  name: Nguyễn Tiến Dũng
+  bio: Càng lớn càng lạc quan<br>Càng béo càng lạc quan.

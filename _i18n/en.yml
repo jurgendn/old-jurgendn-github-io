@@ -1,0 +1,19 @@
+global:
+  vietnam: vi
+  english: en
+
+nav:
+  home: Home
+  blog: Blogs
+  about: About
+
+titles:
+  seoTitle: Kiddo Blog
+
+readMore: Read more
+postList: All Posts
+about: About
+
+basicInfo:
+  name: Tien-Dung Nguyen
+  bio: Growing old, spirit bright<br>Growing round, mindset light

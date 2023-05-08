@@ -22,12 +22,12 @@ title: Blog trẻ thơ
 email: dung.nt170062@sis.hust.edu.vn
 description: >- # this means to ignore newlines until "baseurl:"
   Chia sẻ sự đời của một sinh viên đang sống và học tập theo tấm gương đạo đức Hồ Chí Minh tại đại học Bách khoa Hà Nội
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.jurgendn.pw/" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/" # the subpath of your site, e.g. /blog
+# baseurl: "supremepotatooo.me" # the subpath of your site, e.g. /blog
+url: "https://www.supremepotatooo.me/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: jurgendn
 
 # Build settings
-
 
 permalink: /:categories/:year/:month/:day/:title/
 
@@ -49,6 +49,11 @@ defaults:
 
 # Google Analytics
 google_analytics: UA-146891566-3
+
+# Jekyll multiple language
+plugins:
+  - jekyll-multiple-languages-plugin
+languages: ["en", "vi"]
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

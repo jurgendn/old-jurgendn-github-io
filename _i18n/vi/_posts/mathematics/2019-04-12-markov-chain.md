@@ -5,6 +5,7 @@ categories:		mathematics
 description:	Sơ lược về xích Markov, phần này đa phần sẽ đặt ra các khái niệm cơ bản
 author:			Jurgen
 toc: true
+language: vi
 ---
 
 Đợt này sắp thi mà ngồi ôn chả thấy vào mấy, thế nên ngồi viết vậy, cũng là một lần học luôn. Mà môn này lại còn khó nữa -_-
