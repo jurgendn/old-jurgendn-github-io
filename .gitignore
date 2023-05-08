@@ -16,6 +16,9 @@ _drafts
 *.vi
 *~
 
+# Obsidian
+.obsidian/
+
 # OS or Editor folders
 .DS_Store
 ._*
