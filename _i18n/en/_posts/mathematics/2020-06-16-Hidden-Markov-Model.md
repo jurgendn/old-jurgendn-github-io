@@ -1,67 +1,138 @@
 ---
-title:			Mô hình Markov ẩn
+title:			Hidden Markov Model
 categories:		mathematics
 layout:			post
-description:	Vấn đề tán gái dưới một góc nhìn khác
+description:	About Hidden Markov Model
+lang: en
 ---
-
-Cũng tiện làm bài cuối kì tự dưng thấy cái Hidden Markov Model (HMM) này hay ho quá nên note lại vài dòng cho nhớ vậy
 
 - Table of Contents
 {:toc}
 
-Khá là một cậu bé rất thông minh sinh ra trong một gia đình có truyền thống hiếu học vùng thôn dã, lớn lên trong một gia đình cần lao, giàu lòng yêu nước, sớm giác ngộ lý tưởng cách mạng. Tuổi trẻ thông minh đĩnh ngộ. Tương truyền mới sinh Khá không khóc không cười. Một hôm có vị đạo sĩ đi qua thấy Khá chơi trước cửa, liền nói: “Người này có dung mạo tọa thiên long, đầu gối sơn, chân đạp thủy, bên tả có thanh long, bên phải có bạch hổ, con nhà này chỉ mười tám năm sau, chắc chắn sẽ thành người lớn. Mọi người thấy vậy, cho là sự lạ, hết sức chăm sóc. Quả nhiên, Khá 6 tuổi đã đi học lớp 1, 8 tuổi đã đọc thông viết thạo, lên 9 tuổi đã biết cộng trừ nhân chia. Ai gặp cũng phải trầm trồ khâm phục. Giới học vấn uyên thâm, 18 tuổi đã xong tú tài, trên thông thiên văn, dưới tường địa lý, giữa hiểu nhân luân, ai hỏi gì cũng trả lời được, tuyệt nhiên không đúng câu nào. Đến năm 20 tuổi Khá lui về ở ẩn. Thăm thú sự đời, thấy việc gì có lợi là làm. Nợ nần không biết bao nhiêu mà kể!”.
+Once upon a time, a smarty-pants named Khá was born into a family of scholars in a rural area. Growing up in a hardworking, patriotic family, Khá soon became enamored with revolutionary ideals. Rumor has it that Khá didn't cry or laugh when he was born. One day, a wise man passed by and saw Khá playing outside. He said, "This child's appearance is like a dragon, his knees like a mountain, his feet like water, and he has a blue dragon on his left and a white tiger on his right. In just 18 years, he will surely become a great person." Everyone was amazed and took care of him with great attention. Indeed, Khá started school at the age of 6, read and wrote fluently at 8, and mastered arithmetic at 9. Everyone who met him was impressed by his intelligence. By the time he was 18, he was a knowledgeable scholar, proficient in astronomy and geography, and knowledgeable about human nature. He could easily answer any question, although none of his answers were correct. At 20, Khá retired to a life of seclusion, observing the world and doing whatever was beneficial. He owed so much debt that he lost count!
 
-Tương truyền lúc còn hành tẩu trong ao hồ, Khá có đem lòng yêu con gái của Huấn đại hiệp - một vị học giả uyên thâm, mà minh chứng là những triết lí cuộc sống, những lời răn dạy qua những trang sách. Để chinh phục trái tim của nàng, Khá mỗi ngày gửi cho nàng những áng thơ tình tuyệt tác, những lời yêu có cánh cùng những lời hứa hẹn về một tương lai xán lạn. Tuy nhiên, không phải lúc nào Khá cũng nhận được thư hồi âm của nàng, điều này làm Khá cảm thấy buồn bực. Khá quyết tâm tìm cho ra lí do đằng sau việc không hồi âm của nàng.
+Legend has it that when Khá was still swimming in the pond, he fell in love with the daughter of a great scholar named Huấn. This was evidenced by his deep understanding of life's philosophies and the lessons taught in books. To win her heart, Khá sent her love poems and promises of a bright future every day. However, he didn't always receive a reply from her, which made him feel sad. Determined to find out why she wasn't responding, Khá set out to discover the reason.
 
-## Các dữ liệu quan sát được có liên hệ với nhau hay không?
+## Do these observation data have anything to do with each other?
 
-Đầu tiên, Khá cho rằng các lần nàng hồi âm cho Khá có liên hệ với nhau, tuy nhiên sau nhiều nỗ lực điều tra, Khá vẫn không có chút manh mối nào cho vấn đề này. Mất rất nhiều thời gian và tiền bạc nhưng không đem lại kết quả làm Khá rất buồn bực. May thay, gần đây giang hồ truyền nhau về một vị học thật tên là Dũng, tiếng tăm nồng nặc, học vấn uyên thâm, võ công cái thế lại có tài ăn nói, duy chỉ hay bốc phét là chưa ưng, đến thăm thành phố, Khá bèn đến và nhờ giúp đỡ.
+At first, Khá thought that the times when she replied to him had something to do with each other. But after many investigations and spending a lot of time and money, Khá still couldn't find a clue to this problem. It was a real 'Where's Waldo' situation, except with love letters instead of a red-striped shirt. It made Khá really frustrated. Luckily, there was recently a scholar named Dũng, who was famous for his knowledge, martial arts skills, and smooth talk. Although he tended to brag a lot, Khá still decided to ask for his help when he came to the city.
 
-Nghe xong, vị học thật này phán rằng:
+After hearing the story, this scholar said:
 
-> Nữ nhân tuy rằng khó hiểu, tuy nhiên phàm là người trong thiên hạ, không gì không thể thông hiểu. Cậu tuy tuổi còn nhỏ, nhưng có tinh thần học hỏi, lại cũng là người thông minh, ta không thể không giúp. Ta chỉ nói một câu thôi: "*Có nguyên nhân đứng sau chi phối việc gửi thư của vị nữ nhân này, ngươi nên tìm hiểu cho kĩ*"
+> "Although women are hard to understand, as long as they are people in the world, there is nothing they can't understand. You may be young, but you have a learning spirit, and you are also intelligent. I can't help but help you. I'll just say one thing: "You should investigate carefully the reason behind the control of this woman's letter sending."
 
-Dứt lời, vị học thật này biến mất.
+After that, the scholar disappeared. Khá and her disciples bowed down and meditated.
 
-Khá cùng các môn đệ đứng đó vái lạy một hồi rồi trầm ngâm suy nghĩ.
+> "What would happen if there was a reason behind the control of the replies of that female warrior? Would the world stop spinning? Would the heavens fall? Would Khá finally get a clue? Who knows, but it's worth investigating!"
 
-Nói linh tinh một chút, ta quay lại với bài toán gốc.
+Assume that:
 
-> Điều gì xảy ra nếu có nguyên nhân đứng phía sau chi phối việc hồi âm của vị nữ hiệp kia?
+<pre class="mermaid">
+---
+title: Mood-base diagram
+---
+graph TD
 
-Có rất nhiều nguyên nhân, mà chỉ có vị nữ tử kia biết. Để cho đơn giản, ta hãy giả định như sau:
+subgraph Reply
+    happy{{Happy}}
+    reply[Reply]
+    happy-.->reply
+end
 
-- Vui $$\to$$ trả lời
-- Buồn $$\to$$ không trả lời
+subgraph Ignore
+    sad{{Sad}}
+    ignore[Ignore]
+    sad-.->ignore
+end
+</pre>
 
-Như vậy, việc trả lời thư cho Khá phụ thuộc vào tâm trạng của nàng. Tuy nhiên, nếu có những hôm vui nhưng nàng vẫn gửi thư cho Khá, và những hôm vui mà nàng lại không gửi thư thì sao?
 
-Ta sẽ lại có một chút thay đổi như sau
+This means that the act of replying to Khá's letters depends on the female warrior's mood. However, what if there are days when she's happy but doesn't send a reply, and there are days when she's not happy but sends a reply anyway?
 
-![1](/post_image/mathematics/2020-06-16-Hidden-Markov-Model.assets/1.png "Mô tả quá trình Khá nhận thư")
-{:.tofigure}
+Let's make a small change as follows:
 
-Thế thì mối quan hệ giữa vui và không vui là gì? 
 
-Các cụ có câu: `"Sáng nắng chiều mưa,giữa trưa có bão"`, rõ ràng tâm trạng của nàng làm một `quá trình ngẫu nhiên`. Ta biết rằng quá trình chuyển trạng thái có thể được mô hình hóa bởi một xích Markov, tức là xích Markov này có không gian trạng thái $$S=\{\text{vui, không vui}\}$$ và ma trận xác suất chuyển $$A$$, mà ở đây là chưa biết.
+<pre class="mermaid">
+---
+title: Improvised mood-base diagram
+---
+flowchart LR
 
-Như vậy mô hình đầy đủ cho quá trình này có thể được minh họa như sau
+subgraph Mood 
+    sad{{Sad}}
+    happy{{Happy}}
+end
 
-![2](/post_image/mathematics/2020-06-16-Hidden-Markov-Model.assets/2.png)
+subgraph Reply status
+    reply[Reply]
+    ignore[Ignore]
+    sad-.->reply
+    happy-.->reply
 
-Dĩ nhiên là ta chưa thể biết được quy luật thay đổi trạng thái cũng như xác suất vị nữ nhân này có trả lời hay không, ta sẽ tìm hiểu ở phần sau.
+    sad-.->ignore
+    happy-.->ignore
+end
+linkStyle 0 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 1 stroke-width:1px,fill:none,stroke:blue;
+linkStyle 2 stroke-width:1px,fill:none,stroke:green;
+linkStyle 3 stroke-width:1px,fill:none,stroke:green;
+</pre>
 
-Một mô hình như trên được gọi là mô hình Markov ẩn.
+So, what's the relationship between being happy and not being happy?
 
-## Mô hình Markov ẩn
+As the old saying goes: 'Sunny in the morning, rainy in the afternoon, and a storm in between.' It's clear that the female warrior's mood is a random process. We know that this process can be modeled by a Markov chain, i.e., a Markov chain with a state space of O and a transition probability matrix P, which is currently unknown.
+
+Therefore, the complete model for this process can be illustrated as follows:
+
+<pre class="mermaid">
+---
+title: Mood-transition diagram
+---
+graph LR
+
+subgraph Mood
+    happy{{Happy}}
+    sad{{Sad}}
+end
+
+subgraph Reply status
+    reply[Reply]
+    ignore[Ignore]
+end
+
+
+sad-->sad
+sad-->happy
+happy-->happy
+happy-->sad
+
+happy-.->reply
+happy-.->ignore
+sad-.->reply
+sad-.->ignore
+
+linkStyle 0 stroke-width:1px
+linkStyle 1 stroke-width:1px
+linkStyle 2 stroke-width:1px
+linkStyle 3 stroke-width:1px
+linkStyle 4 stroke-width:1px,fill:none,stroke:red;
+linkStyle 5 stroke-width:1px,fill:none,stroke:red;
+linkStyle 6 stroke-width:1px,fill:none,stroke:green;
+linkStyle 7 stroke-width:1px,fill:none,stroke:green;
+</pre>
+
+Of course, we cannot know the law of state changes or the probability of this female warrior replying to Khá's letters yet. We will explore this in the following section.
+
+A model like this is called a hidden Markov model
+
+## Hidden Markov Model
 
 ![Basic Model](/post_image/mathematics/2020-06-16-Hidden-Markov-Model.assets/HMM.png "Mô hình xích Markov ẩn")
 {:.tofigure}
 
-Trên đây là một mô hình tương đối chính xác về quá trình phát triển của một mô hình Markov ẩn
+### Some definitions
 
-### Định nghĩa
+The very fundamental knowledge about the Markov chain is provided in the previous posts, so I will not do a revision here.
 
 Những kiến thức cơ bản nhất về xích Markov đã được đề cập đến trong các bài viết trước, do đó bài này sẽ không nhắc lại nữa. Ta sẽ đến trực tiếp định nghĩa của một xích Markov ẩn
 

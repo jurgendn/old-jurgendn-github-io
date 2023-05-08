@@ -2,7 +2,7 @@
   <footer>
     <div class="social">
       <a href="https://www.linkedin.com/in/dung-nguyen-tien/"><i class="icon ion-social-linkedin"></i></a><a
-        href="mailto:dung.nt170062@sis.hust.edu.vn"><i class="material-icons">email</i></a><a
+        href="mailto:dungnt.samihust@gmail.com"><i class="material-icons">email</i></a><a
         href="https://github.com/jurgendn"><i class="fab fa-github"></i></a>
       <a href="https://www.facebook.com/dung.richard"><i class="fab fa-facebook"></i></a>
     </div>
@@ -15,7 +15,7 @@
         <a href="{{site.baseurl}}/#about">About</a>
       </li>
     </ul>
-    <p class="copyright">Jurgen @ 2020</p>
+    <p class="copyright">Jurgen @ {{ 'now' | date: "%Y" }}</p>
   </footer>
 </div>
 <script src="/assets/js/jquery.min.js"></script>
@@ -39,6 +39,13 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 
+<script>
+  var config = {
+    startOnLoad: true,
+    align: 'center'
+  };
+  mermaid.initialize(config);
+</script>
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 </script>

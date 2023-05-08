@@ -1,0 +1,191 @@
+.jumbotron {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.jumbotron.df-bg-primary {
+    background-color: #083386;
+}
+
+.df-switch {
+    margin-top: 20px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.btn-toggle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-toggle {
+    margin: 0 4rem;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 1.5rem;
+    width: 5rem;
+    border-radius: 1.5rem;
+    color: #6b7381;
+    background: #0885da;
+}
+
+.btn-toggle:focus,
+.btn-toggle.focus,
+.btn-toggle:focus.active,
+.btn-toggle.focus.active {
+    outline: none;
+}
+
+.btn-toggle:before,
+.btn-toggle:after {
+    line-height: 1.5rem;
+    width: 4rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.25s;
+}
+
+.btn-toggle:before {
+    content: 'en';
+    left: -5rem;
+    color: #109fff;
+}
+
+.btn-toggle:after {
+    content: 'vi';
+    right: -5rem;
+    opacity: 0.5;
+    color: #F47280;
+}
+
+.btn-toggle>.inner-handle {
+    border-radius: 13px;
+    width: 65px;
+    height: 13px;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    background-color: #0f71bd;
+    box-shadow: inset 1px 1px 2px -1px black;
+}
+
+.btn-toggle.active>.inner-handle {
+    background-color: #BD4053;
+}
+
+.btn-toggle>.handle:before {
+    content: "";
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    top: 35%;
+    left: 11px;
+    background-image: radial-gradient(circle at center, #0785da 5px, transparent 5px);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+.btn-toggle.active>.handle:before {
+    background-image: radial-gradient(circle at center, #F47280 5px, transparent 5px);
+}
+
+.btn-toggle>.handle {
+    position: absolute;
+    top: -0.2875rem;
+    left: 0.3875rem;
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 1.125rem;
+    background: #fff;
+    transition: left 0.25s;
+    border: 1px solid #ccc;
+}
+
+.btn-toggle.active {
+    transition: background-color 0.25s;
+}
+
+.btn-toggle.active>.handle {
+    left: 2.4175rem;
+    transition: left 0.25s;
+}
+
+.btn-toggle.active:before {
+    opacity: 0.5;
+}
+
+.btn-toggle.active:after {
+    opacity: 1;
+    color: #F47280;
+}
+
+.btn-toggle.active {
+    background-color: #F47280;
+}
+
+/* .btn-toggle.btn-lg {
+    margin: 0 5rem;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 2.5rem;
+  }
+  .btn-toggle.btn-lg:focus,
+  .btn-toggle.btn-lg.focus,
+  .btn-toggle.btn-lg:focus.active,
+  .btn-toggle.btn-lg.focus.active {
+    outline: none;
+  }
+  .btn-toggle.btn-lg:before,
+  .btn-toggle.btn-lg:after {
+    line-height: 2.5rem;
+    width: 5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.25s;
+  }
+  .btn-toggle.btn-lg:before {
+    content: 'ENGLISH';
+    left: -6rem;
+  }
+  .btn-toggle.btn-lg:after {
+    content: 'SPANISH';
+    right: -6rem;
+    opacity: 0.5;
+  }
+  .btn-toggle.btn-lg > .handle {
+    position: absolute;
+    top: 0.3125rem;
+    left: 0.3125rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 1.875rem;
+    background: #fff;
+    transition: left 0.25s;
+  }
+  .btn-toggle.btn-lg.active {
+    transition: background-color 0.25s;
+  }
+  .btn-toggle.btn-lg.active > .handle {
+    left: 2.8125rem;
+    transition: left 0.25s;
+  }
+  .btn-toggle.btn-lg.active:before {
+    opacity: 0.5;
+  }
+  .btn-toggle.btn-lg.active:after {
+    opacity: 1;
+  } */

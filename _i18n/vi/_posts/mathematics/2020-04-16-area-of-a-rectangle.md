@@ -3,6 +3,7 @@ layout: post
 categories: mathematics
 title: Làm sao để tính được diện tích của một hình chữ nhật?
 description: Xoay quanh việc tính diện tích của một hình quen thuộc
+language: vi
 ---
 
 

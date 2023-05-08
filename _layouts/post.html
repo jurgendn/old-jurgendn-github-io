@@ -29,23 +29,23 @@ layout: page
       "></div>
         <!-- Content -->
         <div class="post-body">
-          <h1 >{{page.title}}</h3>
-          <div class="post-info">
-            <span><a href="{{ author.web }}">{{ author.name }}</a></span>
-          </div>
-          {{page.content}}
-          <div style="display: inline-block; border-top: 0.5px solid rgba(95, 3, 3, 0.5); margin-top: 50px;">
-            {% include share.html %}
-          </div><br>
-          <div id="hyvor-talk-view"></div>
-          <script type="text/javascript">
-            var HYVOR_TALK_WEBSITE = 1524; // DO NOT CHANGE THIS
-            var HYVOR_TALK_CONFIG = {
-              url: '{{ page.url | absolute_url }}',
-              id: '{{page.id}}'
-            };
-          </script>
-          <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
+          <h1>{{page.title}}</h3>
+            <div class="post-info">
+              <span><a href="{{ author.web }}">{{ author.name }}</a></span>
+            </div>
+            {{page.content}}
+            <div style="display: inline-block; border-top: 0.5px solid rgba(95, 3, 3, 0.5); margin-top: 50px;">
+              {% include share.html %}
+            </div><br>
+            <div id="hyvor-talk-view"></div>
+            <script type="text/javascript">
+              var HYVOR_TALK_WEBSITE = 1524; // DO NOT CHANGE THIS
+              var HYVOR_TALK_CONFIG = {
+                url: '{{ page.url | absolute_url }}',
+                id: '{{page.id}}'
+              };
+            </script>
+            <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
         </div>
       </div>
       <div class=" d-flex flex-row flex-grow-1 justify-content-between align-items-stretch align-content-end
